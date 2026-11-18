@@ -1,0 +1,1770 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ustalar — UstaTop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #F8FAFC;
+      color: #0F172A;
+    }
+
+    /* ==================== NAVBAR (Header) ==================== */
+    .navbar {
+      background-color: #FFFFFF;
+      border-bottom: 1px solid #E2E8F0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 44px;
+    }
+
+    .brand-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 36px;
+      height: 36px;
+      background-color: #1D5CE6;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-text {
+      font-size: 21px;
+      font-weight: 700;
+      color: #0F172A;
+      letter-spacing: -0.4px;
+    }
+
+    .logo-text span {
+      color: #1D5CE6;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+      height: 76px;
+    }
+
+    .nav-links li {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-link {
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      color: #475569;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      transition: color 0.2s ease;
+    }
+
+    .nav-link:hover {
+      color: #1D5CE6;
+    }
+
+    /* Faol sahifa ("Ustalar") uchun pastki ko'k chiziq */
+    .nav-link.active {
+      color: #1D5CE6;
+      font-weight: 600;
+    }
+
+    .nav-link.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2.5px;
+      background-color: #1D5CE6;
+      border-radius: 2px 2px 0 0;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .notif-btn {
+      position: relative;
+      background: none;
+      border: none;
+      color: #475569;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .notif-btn:hover {
+      color: #0F172A;
+    }
+
+    .notif-dot {
+      position: absolute;
+      top: 5px;
+      right: 6px;
+      width: 7px;
+      height: 7px;
+      background-color: #EF4444;
+      border-radius: 50%;
+      border: 1.5px solid #FFFFFF;
+    }
+
+    .login-link {
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      color: #0F172A;
+      transition: color 0.2s ease;
+    }
+
+    .login-link:hover {
+      color: #1D5CE6;
+    }
+
+    .become-master-btn {
+      background-color: #1D5CE6;
+      color: #FFFFFF;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 11px 20px;
+      border-radius: 12px;
+      transition: background-color 0.2s ease, transform 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .become-master-btn:hover {
+      background-color: #1749B8;
+    }
+
+    /* ==================== BREADCRUMB & SEARCH ==================== */
+    .masters-top-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 36px 24px 28px;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+
+    .breadcrumb a {
+      color: #475569;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .breadcrumb a:hover {
+      color: #1D5CE6;
+    }
+
+    .breadcrumb-sep {
+      color: #94A3B8;
+      font-size: 15px;
+    }
+
+    .breadcrumb-current {
+      color: #94A3B8;
+    }
+
+    /* Katta qidiruv paneli */
+    .masters-search-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #FFFFFF;
+      border: 1.5px solid #3B82F6;
+      border-radius: 18px;
+      padding: 8px 8px 8px 22px;
+      width: 100%;
+      box-shadow: 0 4px 20px rgba(29, 92, 230, 0.06);
+    }
+
+    .search-field-wrap {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex: 1;
+    }
+
+    .search-field-input {
+      width: 100%;
+      border: none;
+      outline: none;
+      font-size: 15px;
+      color: #0F172A;
+      background: transparent;
+      font-family: inherit;
+    }
+
+    .search-field-input::placeholder {
+      color: #94A3B8;
+    }
+
+    .find-master-btn {
+      background-color: #1D5CE6;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 12px;
+      padding: 14px 26px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      font-family: inherit;
+      transition: background-color 0.2s ease;
+    }
+
+    .find-master-btn:hover {
+      background-color: #1749B8;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .masters-search-bar {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 12px;
+        gap: 12px;
+      }
+      .find-master-btn {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Yuqori navigatsiya paneli -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="brand-logo">
+          <div class="logo-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              <path d="m14 14 5 5"/>
+              <path d="m5 5 5 5"/>
+            </svg>
+          </div>
+          <span class="logo-text">Usta<span>Top</span></span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Bosh sahifa</a></li>
+          <li><a href="xizmatlar.html" class="nav-link">Xizmatlar</a></li>
+          <li><a href="ustalar.html" class="nav-link active">Ustalar</a></li>
+          <li><a href="biz haqimizda.html" class="nav-link">Biz haqimizda</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-right">
+        <a href="#bildirishnomalar" class="notif-btn" aria-label="Bildirishnomalar">
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+          </svg>
+          <span class="notif-dot"></span>
+        </a>
+        <a href="kirish.html" class="login-link">Kirish</a>
+        <a href="ustalar.html" class="become-master-btn">Usta bo‘lish</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Asosiy kontent qismi -->
+  <main id="mastersMain">
+    <section class="masters-top-section">
+      <!-- Breadcrumb navigatsiya -->
+      <nav class="breadcrumb">
+        <a href="index.html">Bosh sahifa</a>
+        <span class="breadcrumb-sep">&rsaquo;</span>
+        <a href="xizmatlar.html">Xizmatlar</a>
+        <span class="breadcrumb-sep">&rsaquo;</span>
+        <span class="breadcrumb-current" id="activeCategoryText">Elektrik</span>
+      </nav>
+
+      <!-- Qidiruv paneli -->
+      <form id="mastersSearchForm" class="masters-search-bar">
+        <div class="search-field-wrap">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#94A3B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input 
+            type="text" 
+            id="masterQueryInput" 
+            class="search-field-input" 
+            placeholder="Qanday xizmat kerak?" 
+            autocomplete="off"
+          >
+        </div>
+        <button type="submit" class="find-master-btn">
+          Usta topish <span>&rarr;</span>
+        </button>
+      </form>
+    </section>
+
+    <!-- Keyingi bo'limlar (filtr va ustalar kartochkalari) shu yerga qo'shiladi -->
+  </main>
+
+  <script>
+    // Boshqa sahifalardan (?category=..., ?service=..., ?q=...) kelgan so'rovni avtomatik o'qish
+    const urlParams = new URLSearchParams(window.location.search);
+    const paramValue = urlParams.get('category') || urlParams.get('service') || urlParams.get('q');
+
+    const activeCategoryEl = document.getElementById('activeCategoryText');
+    const queryInputEl = document.getElementById('masterQueryInput');
+
+    if (paramValue) {
+      activeCategoryEl.textContent = paramValue;
+      queryInputEl.value = paramValue;
+    }
+
+    // Qidiruv formasi yuborilganda breadcrumb matnini yangilash
+    document.getElementById('mastersSearchForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const val = queryInputEl.value.trim();
+      if (val) {
+        activeCategoryEl.textContent = val;
+      }
+    });
+  </script>
+    <section class="masters-catalog-layout">
+  <div class="catalog-layout-grid">
+    <!-- ==================== CHAP SIDEBAR: FILTRLAR ==================== -->
+    <aside class="filters-sidebar">
+      <div class="filters-header">
+        <h3 class="filters-title">Filtrlar</h3>
+        <button type="button" id="resetSidebarFilters" class="reset-link">Tozalash</button>
+      </div>
+
+      <!-- Joylashuv -->
+      <div class="filter-group">
+        <label class="filter-label" for="locationSelect">Joylashuv</label>
+        <div class="select-input-box">
+          <svg class="loc-pin-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <select id="locationSelect" class="filter-select">
+            <option value="all">Toshkent shahri</option>
+            <option value="Yunusobod">Yunusobod tumani</option>
+            <option value="Chilonzor">Chilonzor tumani</option>
+            <option value="Mirzo Ulug‘bek">Mirzo Ulug‘bek tumani</option>
+            <option value="Shayxontohur">Shayxontohur tumani</option>
+          </select>
+          <svg class="chevron-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#475569" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Narx oralig'i -->
+      <div class="filter-group">
+        <label class="filter-label">Narx oralig‘i</label>
+        <div class="price-inputs-row">
+          <input type="text" id="minPriceInput" class="price-box-input" value="50 000" readonly>
+          <span class="price-dash">—</span>
+          <input type="text" id="maxPriceInput" class="price-box-input" value="500 000" readonly>
+        </div>
+        <div class="dual-range-wrap">
+          <div class="slider-track-bg"></div>
+          <div id="sliderTrackActive" class="slider-track-active"></div>
+          <input type="range" id="minPriceRange" min="50000" max="600000" step="10000" value="50000" class="range-thumb">
+          <input type="range" id="maxPriceRange" min="50000" max="600000" step="10000" value="500000" class="range-thumb">
+        </div>
+      </div>
+
+      <!-- Reyting -->
+      <div class="filter-group no-border">
+        <label class="filter-label">Reyting</label>
+        <div class="radio-list">
+          <label class="radio-item">
+            <input type="radio" name="ratingFilter" value="4.5" checked>
+            <span class="custom-radio"></span>
+            <span class="radio-text">4.5 va yuqori</span>
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="ratingFilter" value="4.0">
+            <span class="custom-radio"></span>
+            <span class="radio-text">4.0 va yuqori</span>
+          </label>
+          <label class="radio-item">
+            <input type="radio" name="ratingFilter" value="0">
+            <span class="custom-radio"></span>
+            <span class="radio-text">Barcha reytinglar</span>
+          </label>
+        </div>
+      </div>
+    </aside>
+
+    <!-- ==================== O'NG QISM: USTALAR RO'YXATI ==================== -->
+    <div class="masters-results-area">
+      <!-- Yuqori sarlavha va saralash -->
+      <div class="results-top-bar">
+        <div>
+          <span class="category-pill-badge" id="resultsBadge">ELEKTRIK</span>
+          <h1 class="results-main-title" id="resultsHeading">Toshkentdagi elektrik ustalari</h1>
+          <p class="results-subtitle" id="resultsCountLabel">214 nafar mutaxassis topildi</p>
+        </div>
+
+        <div class="sort-control">
+          <span class="sort-label">Saralash:</span>
+          <div class="sort-select-wrap">
+            <select id="sortSelect" class="sort-select">
+              <option value="recommended">Eng mos</option>
+              <option value="price-asc">Arzondan qimmatga</option>
+              <option value="rating-desc">Reytingi yuqori</option>
+              <option value="exp-desc">Tajribasi ko‘p</option>
+            </select>
+            <svg class="sort-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0F172A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Faol filtr chiplari -->
+      <div class="active-chips-row" id="activeChipsRow">
+        <span class="filter-chip" data-chip="rating">
+          4.5+ reyting <button type="button" class="chip-close" aria-label="O'chirish">&times;</button>
+        </span>
+        <span class="filter-chip" data-chip="exp">
+          5+ yil tajriba <button type="button" class="chip-close" aria-label="O'chirish">&times;</button>
+        </span>
+        <button type="button" id="clearAllChipsBtn" class="clear-all-link">Barchasini tozalash</button>
+      </div>
+
+      <!-- Ustalar kartochkalari konteyneri -->
+      <div class="masters-cards-list" id="mastersCardsList">
+        <!-- JS orqali dinamik va rasmdagi birinchi karta bilan to'ldiriladi -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Murojaat / Profil Modal oynasi -->
+<div id="masterActionModal" class="action-modal-backdrop">
+  <div class="action-modal-box">
+    <button type="button" id="closeActionModal" class="modal-x-btn">&times;</button>
+    <div id="modalBodyContent"></div>
+  </div>
+</div>
+
+<style>
+  .masters-catalog-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 8px 24px 80px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .catalog-layout-grid {
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+
+  /* ==================== SIDEBAR FILTRLAR ==================== */
+  .filters-sidebar {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 20px;
+    padding: 24px;
+  }
+
+  .filters-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #F1F5F9;
+    margin-bottom: 20px;
+  }
+
+  .filters-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0F172A;
+    margin: 0;
+  }
+
+  .reset-link {
+    background: none;
+    border: none;
+    color: #1D5CE6;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .reset-link:hover {
+    text-decoration: underline;
+  }
+
+  .filter-group {
+    padding-bottom: 22px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid #F1F5F9;
+  }
+
+  .filter-group.no-border {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+
+  .filter-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 12px;
+  }
+
+  .select-input-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .loc-pin-icon {
+    position: absolute;
+    left: 14px;
+    pointer-events: none;
+  }
+
+  .chevron-icon {
+    position: absolute;
+    right: 14px;
+    pointer-events: none;
+  }
+
+  .filter-select {
+    width: 100%;
+    appearance: none;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 11px 36px 11px 40px;
+    font-size: 14px;
+    color: #0F172A;
+    font-family: inherit;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+
+  .filter-select:focus {
+    border-color: #1D5CE6;
+  }
+
+  /* Narx oralig'i */
+  .price-inputs-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+
+  .price-box-input {
+    width: 100%;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    padding: 9px 10px;
+    font-size: 13px;
+    color: #0F172A;
+    font-family: inherit;
+    background: #FFFFFF;
+    outline: none;
+  }
+
+  .price-dash {
+    color: #94A3B8;
+  }
+
+  /* Ikki tomonlama Range Slider */
+  .dual-range-wrap {
+    position: relative;
+    height: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .slider-track-bg {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #E2E8F0;
+    border-radius: 4px;
+  }
+
+  .slider-track-active {
+    position: absolute;
+    height: 4px;
+    background: #1D5CE6;
+    border-radius: 4px;
+    left: 0%;
+    right: 18%;
+  }
+
+  .range-thumb {
+    position: absolute;
+    width: 100%;
+    pointer-events: none;
+    -webkit-appearance: none;
+    background: transparent;
+    margin: 0;
+  }
+
+  .range-thumb::-webkit-slider-thumb {
+    pointer-events: auto;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 2.5px solid #1D5CE6;
+    cursor: pointer;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Radio tugmalar */
+  .radio-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .radio-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #334155;
+  }
+
+  .radio-item input {
+    display: none;
+  }
+
+  .custom-radio {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1.5px solid #CBD5E1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s ease;
+    flex-shrink: 0;
+  }
+
+  .radio-item input:checked + .custom-radio {
+    border-color: #1D5CE6;
+    background-color: #1D5CE6;
+    box-shadow: inset 0 0 0 3.5px #FFFFFF;
+  }
+
+  /* ==================== O'NG QISM: SARLAVHA VA CHIPLAR ==================== */
+  .results-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .category-pill-badge {
+    display: inline-block;
+    background-color: #EFF6FF;
+    color: #1D5CE6;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 99px;
+    margin-bottom: 10px;
+  }
+
+  .results-main-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0F172A;
+    margin: 0 0 6px 0;
+    letter-spacing: -0.6px;
+  }
+
+  .results-subtitle {
+    font-size: 14px;
+    color: #64748B;
+    margin: 0;
+  }
+
+  .sort-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .sort-label {
+    font-size: 13px;
+    color: #64748B;
+  }
+
+  .sort-select-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .sort-select {
+    appearance: none;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 9px 34px 9px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #0F172A;
+    font-family: inherit;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .sort-chevron {
+    position: absolute;
+    right: 11px;
+    pointer-events: none;
+  }
+
+  /* Faol filtr teglari */
+  .active-chips-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .filter-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #EFF6FF;
+    color: #1D5CE6;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 99px;
+  }
+
+  .chip-close {
+    background: none;
+    border: none;
+    color: #1D5CE6;
+    font-size: 16px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .clear-all-link {
+    background: none;
+    border: none;
+    color: #1D5CE6;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 4px 6px;
+    font-family: inherit;
+  }
+
+  .clear-all-link:hover {
+    text-decoration: underline;
+  }
+
+  /* ==================== USTA KARTOCHKASI ==================== */
+  .masters-cards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .master-card {
+    display: flex;
+    gap: 24px;
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 22px;
+    padding: 16px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .master-card:hover {
+    border-color: #CBD5E1;
+    box-shadow: 0 12px 28px -8px rgba(15, 23, 42, 0.08);
+  }
+
+  .master-photo-box {
+    width: 210px;
+    height: 225px;
+    border-radius: 16px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background-color: #E2E8F0;
+  }
+
+  .master-photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .master-card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px 8px 6px 0;
+    min-width: 0;
+  }
+
+  .master-top-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .master-full-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0F172A;
+    margin: 0 0 4px 0;
+  }
+
+  .master-profession {
+    font-size: 14px;
+    color: #64748B;
+    margin: 0 0 12px 0;
+  }
+
+  .verified-shield {
+    color: #1D5CE6;
+    flex-shrink: 0;
+    padding: 2px;
+  }
+
+  .master-meta-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 13px;
+    color: #475569;
+    margin-bottom: 12px;
+  }
+
+  .star-score {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 700;
+    color: #0F172A;
+  }
+
+  .reviews-muted {
+    color: #64748B;
+    font-weight: 400;
+  }
+
+  .master-loc-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: #64748B;
+  }
+
+  .loc-text-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .free-today-badge {
+    background-color: #ECFDF5;
+    color: #059669;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 99px;
+  }
+
+  .master-card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding-top: 16px;
+    margin-top: 16px;
+    border-top: 1px solid #F1F5F9;
+  }
+
+  .price-caption {
+    display: block;
+    font-size: 12px;
+    color: #64748B;
+    margin-bottom: 3px;
+  }
+
+  .price-amount {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0F172A;
+  }
+
+  .card-actions-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn-outline-profile {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    color: #0F172A;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 11px 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+  }
+
+  .btn-outline-profile:hover {
+    border-color: #CBD5E1;
+    background-color: #F8FAFC;
+  }
+
+  .btn-primary-contact {
+    background: #1D5CE6;
+    border: none;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background-color 0.2s ease;
+  }
+
+  .btn-primary-contact:hover {
+    background-color: #1749B8;
+  }
+
+  /* Modal oynasi */
+  .action-modal-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 16px;
+  }
+
+  .action-modal-backdrop.open {
+    display: flex;
+  }
+
+  .action-modal-box {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 28px;
+    max-width: 440px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  .modal-x-btn {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    background: none;
+    border: none;
+    font-size: 26px;
+    color: #64748B;
+    cursor: pointer;
+  }
+
+  @media (max-width: 960px) {
+    .catalog-layout-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .master-card {
+      flex-direction: column;
+    }
+    .master-photo-box {
+      width: 100%;
+      height: 220px;
+    }
+    .master-card-body {
+      padding: 0 4px 4px;
+    }
+  }
+</style>
+
+<script>
+  // Ustalar ma'lumotlar bazasi (birinchisi aynan rasmdagi Azizbek Karimov)
+  const mastersData = [
+    {
+      id: 1,
+      name: "Azizbek Karimov",
+      profession: "Elektrik ustasi",
+      category: "Elektrik",
+      rating: 4.9,
+      reviews: 127,
+      experience: 8,
+      district: "Yunusobod",
+      locationText: "Yunusobod, Toshkent",
+      freeToday: true,
+      price: 120000,
+      phone: "+998 90 123-45-67",
+      bio: "Uy va ofislarda elektr montaj, shit yig‘ish, qisqa tutashuvlarni bartaraf etish va zamonaviy yoritish tizimlarini o‘rnatish bo‘yicha 8 yillik tajribaga ega mutaxassis.",
+      photo: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      id: 2,
+      name: "Sardor Rahimov",
+      profession: "Elektrik ustasi",
+      category: "Elektrik",
+      rating: 4.8,
+      reviews: 94,
+      experience: 6,
+      district: "Chilonzor",
+      locationText: "Chilonzor, Toshkent",
+      freeToday: true,
+      price: 100000,
+      phone: "+998 93 456-78-90",
+      bio: "Rozetka, viklyuchatel almashtirish, lyustra ilish va 3 fazali tarmoqlarni sozlash xizmatlari. Tezkor yetib borish kafolatlanadi.",
+      photo: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=600&q=80"
+    },
+    {
+      id: 3,
+      name: "Jamshid Tursunov",
+      profession: "Oliy toifali Elektrik",
+      category: "Elektrik",
+      rating: 5.0,
+      reviews: 163,
+      experience: 11,
+      district: "Mirzo Ulug‘bek",
+      locationText: "Mirzo Ulug‘bek, Toshkent",
+      freeToday: false,
+      price: 150000,
+      phone: "+998 97 777-11-22",
+      bio: "Noldan kalit topshirish asosida elektr tizimlarini loyihalash, stabilizator va generator o‘rnatish bo‘yicha professional usta.",
+      photo: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80"
+    }
+  ];
+
+  // State
+  let filterState = {
+    location: 'all',
+    minPrice: 50000,
+    maxPrice: 500000,
+    minRating: 4.5,
+    minExp: 5,
+    sortBy: 'recommended'
+  };
+
+  const cardsListEl = document.getElementById('mastersCardsList');
+  const locationSelect = document.getElementById('locationSelect');
+  const minPriceRange = document.getElementById('minPriceRange');
+  const maxPriceRange = document.getElementById('maxPriceRange');
+  const minPriceInput = document.getElementById('minPriceInput');
+  const maxPriceInput = document.getElementById('maxPriceInput');
+  const sliderTrackActive = document.getElementById('sliderTrackActive');
+  const sortSelect = document.getElementById('sortSelect');
+  const activeChipsRow = document.getElementById('activeChipsRow');
+
+  // URL dan kelgan toifa nomini sarlavhaga moslash
+  const params = new URLSearchParams(window.location.search);
+  const urlCat = params.get('category') || params.get('service') || params.get('q');
+  if (urlCat) {
+    document.getElementById('resultsBadge').textContent = urlCat.toUpperCase();
+    document.getElementById('resultsHeading').textContent = `Toshkentdagi ${urlCat.toLowerCase()} ustalari`;
+  }
+
+  function formatSum(num) {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  }
+
+  function updateSliderTrack() {
+    const min = parseInt(minPriceRange.min);
+    const max = parseInt(minPriceRange.max);
+    const leftPct = ((filterState.minPrice - min) / (max - min)) * 100;
+    const rightPct = 100 - ((filterState.maxPrice - min) / (max - min)) * 100;
+    sliderTrackActive.style.left = leftPct + '%';
+    sliderTrackActive.style.right = rightPct + '%';
+  }
+
+  function renderChips() {
+    let chipsHTML = '';
+    if (filterState.minRating > 0) {
+      chipsHTML += `<span class="filter-chip">${filterState.minRating}+ reyting <button type="button" class="chip-close" onclick="removeChip('rating')">&times;</button></span>`;
+    }
+    if (filterState.minExp > 0) {
+      chipsHTML += `<span class="filter-chip">${filterState.minExp}+ yil tajriba <button type="button" class="chip-close" onclick="removeChip('exp')">&times;</button></span>`;
+    }
+    if (filterState.location !== 'all') {
+      chipsHTML += `<span class="filter-chip">${filterState.location} <button type="button" class="chip-close" onclick="removeChip('location')">&times;</button></span>`;
+    }
+    if (chipsHTML) {
+      chipsHTML += `<button type="button" class="clear-all-link" onclick="resetAllFilters()">Barchasini tozalash</button>`;
+    }
+    activeChipsRow.innerHTML = chipsHTML;
+  }
+
+  window.removeChip = function(type) {
+    if (type === 'rating') {
+      filterState.minRating = 0;
+      document.querySelector('input[name="ratingFilter"][value="0"]').checked = true;
+    } else if (type === 'exp') {
+      filterState.minExp = 0;
+    } else if (type === 'location') {
+      filterState.location = 'all';
+      locationSelect.value = 'all';
+    }
+    renderAll();
+  };
+
+  window.resetAllFilters = function() {
+    filterState = {
+      location: 'all',
+      minPrice: 50000,
+      maxPrice: 600000,
+      minRating: 0,
+      minExp: 0,
+      sortBy: 'recommended'
+    };
+    locationSelect.value = 'all';
+    minPriceRange.value = 50000;
+    maxPriceRange.value = 600000;
+    minPriceInput.value = formatSum(50000);
+    maxPriceInput.value = formatSum(600000);
+    sortSelect.value = 'recommended';
+    document.querySelector('input[name="ratingFilter"][value="0"]').checked = true;
+    updateSliderTrack();
+    renderAll();
+  };
+
+  function renderMasters() {
+    let filtered = mastersData.filter(m => {
+      const matchLoc = filterState.location === 'all' || m.district === filterState.location;
+      const matchPrice = m.price >= filterState.minPrice && m.price <= filterState.maxPrice;
+      const matchRating = m.rating >= filterState.minRating;
+      const matchExp = m.experience >= filterState.minExp;
+      return matchLoc && matchPrice && matchRating && matchExp;
+    });
+
+    if (filterState.sortBy === 'price-asc') {
+      filtered.sort((a, b) => a.price - b.price);
+    } else if (filterState.sortBy === 'rating-desc') {
+      filtered.sort((a, b) => b.rating - a.rating);
+    } else if (filterState.sortBy === 'exp-desc') {
+      filtered.sort((a, b) => b.experience - a.experience);
+    }
+
+    if (filtered.length === 0) {
+      cardsListEl.innerHTML = `<div style="background:#fff;border:1px solid #E2E8F0;border-radius:18px;padding:40px;text-align:center;color:#64748B;">Tanlangan filtrlar bo‘yicha usta topilmadi. Filtrlarni yumshatib ko‘ring.</div>`;
+      return;
+    }
+
+    cardsListEl.innerHTML = filtered.map(m => `
+      <article class="master-card">
+        <div class="master-photo-box">
+          <img src="${m.photo}" alt="${m.name}">
+        </div>
+
+        <div class="master-card-body">
+          <div>
+            <div class="master-top-info">
+              <div>
+                <h2 class="master-full-name">${m.name}</h2>
+                <p class="master-profession">${m.profession}</p>
+              </div>
+              <div class="verified-shield" title="Tasdiqlangan usta">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1D5CE6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <polyline points="9 12 11 14 15 10"></polyline>
+                </svg>
+              </div>
+            </div>
+
+            <div class="master-meta-row">
+              <span class="star-score">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="#FACC15" stroke="#FACC15" stroke-width="2">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+                ${m.rating.toFixed(1)}
+              </span>
+              <span class="reviews-muted">(${m.reviews} sharh)</span>
+              <span>&middot;</span>
+              <span>${m.experience} yil tajriba</span>
+            </div>
+
+            <div class="master-loc-row">
+              <span class="loc-text-wrap">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                ${m.locationText}
+              </span>
+              ${m.freeToday ? '<span class="free-today-badge">Bugun bo‘sh</span>' : ''}
+            </div>
+          </div>
+
+          <div class="master-card-footer">
+            <div>
+              <span class="price-caption">Xizmat narxi</span>
+              <span class="price-amount">${formatSum(m.price)} so‘mdan</span>
+            </div>
+
+            <div class="card-actions-group">
+              <button type="button" class="btn-outline-profile" onclick="openMasterModal(${m.id}, 'profile')">Profilni ko‘rish</button>
+              <button type="button" class="btn-primary-contact" onclick="openMasterModal(${m.id}, 'contact')">Murojaat qilish</button>
+            </div>
+          </div>
+        </div>
+      </article>
+    `).join('');
+  }
+
+  function renderAll() {
+    renderChips();
+    renderMasters();
+  }
+
+  // Event listeners
+  locationSelect.addEventListener('change', (e) => {
+    filterState.location = e.target.value;
+    renderAll();
+  });
+
+  minPriceRange.addEventListener('input', () => {
+    let val = parseInt(minPriceRange.value);
+    if (val > filterState.maxPrice - 20000) {
+      val = filterState.maxPrice - 20000;
+      minPriceRange.value = val;
+    }
+    filterState.minPrice = val;
+    minPriceInput.value = formatSum(val);
+    updateSliderTrack();
+    renderMasters();
+  });
+
+  maxPriceRange.addEventListener('input', () => {
+    let val = parseInt(maxPriceRange.value);
+    if (val < filterState.minPrice + 20000) {
+      val = filterState.minPrice + 20000;
+      maxPriceRange.value = val;
+    }
+    filterState.maxPrice = val;
+    maxPriceInput.value = formatSum(val);
+    updateSliderTrack();
+    renderMasters();
+  });
+
+  document.querySelectorAll('input[name="ratingFilter"]').forEach(radio => {
+    radio.addEventListener('change', (e) => {
+      filterState.minRating = parseFloat(e.target.value);
+      renderAll();
+    });
+  });
+
+  sortSelect.addEventListener('change', (e) => {
+    filterState.sortBy = e.target.value;
+    renderMasters();
+  });
+
+  document.getElementById('resetSidebarFilters').addEventListener('click', resetAllFilters);
+
+  // Modal boshqaruvi
+  const actionModal = document.getElementById('masterActionModal');
+  const modalBody = document.getElementById('modalBodyContent');
+
+  window.openMasterModal = function(id, mode) {
+    const m = mastersData.find(item => item.id === id);
+    if (!m) return;
+
+    if (mode === 'profile') {
+      modalBody.innerHTML = `
+        <h3 style="font-size:22px;margin:0 0 4px;">${m.name}</h3>
+        <p style="color:#64748B;font-size:14px;margin:0 0 16px;">${m.profession} &middot; ${m.locationText}</p>
+        <div style="background:#F8FAFC;padding:12px 16px;border-radius:12px;margin-bottom:16px;font-size:14px;">
+          <strong>Reyting:</strong> ${m.rating} ★ (${m.reviews} sharh) &nbsp;|&nbsp; <strong>Tajriba:</strong> ${m.experience} yil
+        </div>
+        <p style="font-size:14px;line-height:1.6;color:#334155;margin:0 0 20px;">${m.bio}</p>
+        <button type="button" class="btn-primary-contact" style="width:100%;" onclick="openMasterModal(${m.id}, 'contact')">Buyurtma berish (${formatSum(m.price)} so‘mdan)</button>
+      `;
+    } else {
+      modalBody.innerHTML = `
+        <h3 style="font-size:20px;margin:0 0 6px;">${m.name} bilan bog‘lanish</h3>
+        <p style="color:#64748B;font-size:13px;margin:0 0 18px;">Usta sizga 10 daqiqa ichida qo‘ng‘iroq qiladi</p>
+        <div style="background:#EFF6FF;color:#1D5CE6;padding:12px 16px;border-radius:12px;font-weight:700;font-size:16px;margin-bottom:16px;text-align:center;">
+          ${m.phone}
+        </div>
+        <input type="text" placeholder="Ismingiz" style="width:100%;padding:12px;border:1px solid #E2E8F0;border-radius:10px;margin-bottom:10px;font-family:inherit;">
+        <input type="tel" placeholder="+998 (__) ___-__-__" style="width:100%;padding:12px;border:1px solid #E2E8F0;border-radius:10px;margin-bottom:16px;font-family:inherit;">
+        <button type="button" class="btn-primary-contact" style="width:100%;" onclick="document.getElementById('masterActionModal').classList.remove('open');alert('So‘rovingiz ustaga yuborildi!')">So‘rov yuborish</button>
+      `;
+    }
+    actionModal.classList.add('open');
+  };
+
+  document.getElementById('closeActionModal').addEventListener('click', () => {
+    actionModal.classList.remove('open');
+  });
+
+  actionModal.addEventListener('click', (e) => {
+    if (e.target === actionModal) actionModal.classList.remove('open');
+  });
+
+  // Boshlang'ich holatni chizish
+  updateSliderTrack();
+  renderAll();
+
+</script>
+
+  <!-- ==================== OMMABOP XIZMATLAR BO'LIMI ==================== -->
+<section class="masters-popular-section">
+  <div class="popular-inner">
+    <h2 class="popular-heading">Ommabop xizmatlar</h2>
+
+    <div class="popular-cards-row">
+      <!-- 1. Kran va quvur ta'miri -->
+      <a href="?service=Kran va quvur ta'miri" class="pop-service-card" data-service-name="Kran va quvur ta’miri">
+        <div class="pop-icon-square">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1D5CE6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 3v12"></path>
+            <circle cx="18" cy="6" r="3"></circle>
+            <circle cx="6" cy="18" r="3"></circle>
+            <path d="M18 9a9 9 0 0 1-9 9"></path>
+          </svg>
+        </div>
+        <div class="pop-text-block">
+          <h3 class="pop-card-title">Kran va quvur ta’miri</h3>
+          <span class="pop-card-price">100 000 so‘mdan</span>
+        </div>
+        <span class="pop-card-arrow">&rarr;</span>
+      </a>
+
+      <!-- 2. Elektr nosozligini aniqlash -->
+      <a href="?service=Elektr nosozligini aniqlash" class="pop-service-card" data-service-name="Elektr nosozligini aniqlash">
+        <div class="pop-icon-square">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1D5CE6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+        </div>
+        <div class="pop-text-block">
+          <h3 class="pop-card-title">Elektr nosozligini aniqlash</h3>
+          <span class="pop-card-price">120 000 so‘mdan</span>
+        </div>
+        <span class="pop-card-arrow">&rarr;</span>
+      </a>
+
+      <!-- 3. Kir yuvish mashinasi ta'miri -->
+      <a href="?service=Kir yuvish mashinasi ta'miri" class="pop-service-card" data-service-name="Kir yuvish mashinasi ta’miri">
+        <div class="pop-icon-square">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1D5CE6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+            <circle cx="12" cy="13" r="4"></circle>
+            <line x1="8" y1="6" x2="8.01" y2="6"></line>
+            <line x1="12" y1="6" x2="12.01" y2="6"></line>
+          </svg>
+        </div>
+        <div class="pop-text-block">
+          <h3 class="pop-card-title">Kir yuvish mashinasi ta’miri</h3>
+          <span class="pop-card-price">150 000 so‘mdan</span>
+        </div>
+        <span class="pop-card-arrow">&rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER QISMI ==================== -->
+<footer class="ustatop-footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <!-- Logotip va tavsif -->
+      <div class="footer-brand">
+        <a href="index.html" class="brand-logo">
+          <div class="logo-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              <path d="m14 14 5 5"/>
+              <path d="m5 5 5 5"/>
+            </svg>
+          </div>
+          <span class="logo-text">Usta<span>Top</span></span>
+        </a>
+        <p class="brand-desc">
+          Ishonchli ustalarni topish uchun O‘zbekistondagi zamonaviy xizmatlar platformasi.
+        </p>
+      </div>
+
+      <!-- Platforma ustuni -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Platforma</h4>
+        <ul class="footer-links">
+          <li><a href="xizmatlar.html">Xizmatlar</a></li>
+          <li><a href="ustalar.html">Ustalar</a></li>
+          <li><a href="ai-yordamchi.html">AI yordamchi</a></li>
+        </ul>
+      </div>
+
+      <!-- Yordam ustuni -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Yordam</h4>
+        <ul class="footer-links">
+          <li><a href="faq.html">Savol-javoblar</a></li>
+          <li><a href="xavfsizlik.html">Xavfsizlik</a></li>
+          <li><a href="boglanish.html">Bog‘lanish</a></li>
+        </ul>
+      </div>
+
+      <!-- Mutaxassislar uchun ustuni -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Mutaxassislar uchun</h4>
+        <ul class="footer-links">
+          <li><a href="usta-bolish.html">Usta bo‘lish</a></li>
+          <li><a href="hamkorlik.html">Hamkorlik shartlari</a></li>
+          <li><a href="dizayn.html">Dizayn tizimi</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Pastki mualliflik huquqi qismi -->
+    <div class="footer-bottom">
+      <p>© 2025 UstaTop. Barcha huquqlar himoyalangan.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* ==================== OMMABOP XIZMATLAR STILLARI ==================== */
+  .masters-popular-section {
+    background-color: #FFFFFF;
+    border-top: 1px solid #F1F5F9;
+    padding: 56px 24px 80px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .popular-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .popular-heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: #0F172A;
+    margin: 0 0 32px 0;
+    letter-spacing: -0.5px;
+  }
+
+  .popular-cards-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .pop-service-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    background-color: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 18px;
+    padding: 24px 22px;
+    text-decoration: none;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .pop-service-card:hover {
+    transform: translateY(-3px);
+    border-color: #BFDBFE;
+    box-shadow: 0 12px 24px -8px rgba(15, 23, 42, 0.08);
+  }
+
+  .pop-icon-square {
+    width: 54px;
+    height: 54px;
+    background-color: #EFF6FF;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background-color 0.2s ease;
+  }
+
+  .pop-service-card:hover .pop-icon-square {
+    background-color: #DBEAFE;
+  }
+
+  .pop-text-block {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .pop-card-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0F172A;
+    margin: 0 0 6px 0;
+    line-height: 1.3;
+  }
+
+  .pop-card-price {
+    display: block;
+    font-size: 13px;
+    color: #64748B;
+  }
+
+  .pop-card-arrow {
+    color: #1D5CE6;
+    font-size: 20px;
+    transition: transform 0.2s ease;
+  }
+
+  .pop-service-card:hover .pop-card-arrow {
+    transform: translateX(4px);
+  }
+
+  /* ==================== FOOTER STILLARI ==================== */
+  .ustatop-footer {
+    background-color: #0D1627;
+    color: #94A3B8;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 64px 24px 36px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 56px;
+  }
+
+  .ustatop-footer .brand-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    margin-bottom: 18px;
+  }
+
+  .ustatop-footer .logo-icon {
+    width: 38px;
+    height: 38px;
+    background-color: #1D5CE6;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ustatop-footer .logo-text {
+    font-size: 22px;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: -0.3px;
+  }
+
+  .ustatop-footer .logo-text span {
+    color: #1D5CE6;
+  }
+
+  .brand-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #94A3B8;
+    max-width: 300px;
+    margin: 0;
+  }
+
+  .footer-heading {
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .footer-links a {
+    color: #94A3B8;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+  }
+
+  .footer-links a:hover {
+    color: #FFFFFF;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 28px;
+    font-size: 13px;
+    color: #64748B;
+  }
+
+  .footer-bottom p {
+    margin: 0;
+  }
+
+  @media (max-width: 960px) {
+    .popular-cards-row {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 860px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+</style>
+
+<script>
+  // Ommabop xizmat kartochkasi bosilganda sahifani qayta yuklamasdan tepaga silliq chiqarib, qidiruvni yangilash
+  document.querySelectorAll('.pop-service-card').forEach(card => {
+    card.addEventListener('click', function(e) {
+      e.preventDefault();
+      const serviceName = this.getAttribute('data-service-name');
+      
+      const queryInput = document.getElementById('masterQueryInput');
+      const breadcrumbCat = document.getElementById('activeCategoryText');
+      const resultsBadge = document.getElementById('resultsBadge');
+      const resultsHeading = document.getElementById('resultsHeading');
+
+      if (queryInput) queryInput.value = serviceName;
+      if (breadcrumbCat) breadcrumbCat.textContent = serviceName;
+      if (resultsBadge) resultsBadge.textContent = serviceName.toUpperCase();
+      if (resultsHeading) resultsHeading.textContent = `Toshkentdagi ${serviceName.toLowerCase()} ustalari`;
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+</script>
+  
+</body>
+</html>

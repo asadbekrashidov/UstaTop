@@ -1,0 +1,2363 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UstaTop — Ishonchli ustani topish endi oson!</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-[#F4F7FE] via-[#F8FAFF] to-[#EEF4FF] min-h-screen text-slate-900">
+
+  <!-- NAVBAR -->
+  <header class="bg-white/90 backdrop-blur-md border-b border-slate-100 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      
+      <!-- Chap tomon: Logo va Menyu -->
+      <div class="flex items-center gap-12">
+        <a href="index.html" class="flex items-center gap-2.5">
+          <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white shadow-md shadow-blue-600/20">
+            <!-- Kalit va bolg'a ikonkasi -->
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <span class="text-2xl font-extrabold text-blue-600 tracking-tight">UstaTop</span>
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-[15px] font-medium">
+          <a href="index.html" class="text-blue-600 font-semibold border-b-2 border-blue-600 py-7">Bosh sahifa</a>
+          <a href="xizmatlar.html" class="text-slate-600 hover:text-blue-600 transition py-7">Xizmatlar</a>
+          <a href="ustalar.html" class="text-slate-600 hover:text-blue-600 transition py-7">Ustalar</a>
+          <li><a href="biz haqimizda.html" class="nav-link">Biz haqimizda</a></li>
+        </nav>
+      </div>
+
+      <!-- O'ng tomon: Qo'ng'iroqcha, Kirish, Usta bo'lish -->
+      <div class="flex items-center gap-6">
+        <button class="relative text-slate-600 hover:text-slate-900 transition">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+          </svg>
+          <span class="w-2 h-2 bg-red-500 rounded-full absolute top-0.5 right-0.5"></span>
+        </button>
+
+        <a href="#" class="text-[15px] font-semibold text-slate-700 hover:text-blue-600 transition">Kirish</a>
+        
+        <a href="ustalar.html" class="bg-blue-600 hover:bg-blue-700 text-white text-[15px] font-semibold px-6 py-3 rounded-xl shadow-lg shadow-blue-600/25 transition">
+          Usta bo‘lish
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <main class="max-w-7xl mx-auto px-6 pt-16 pb-24">
+    <div class="grid lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Chap ustun (7 qism) -->
+      <div class="lg:col-span-7 space-y-7">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 bg-blue-100/80 text-blue-700 px-4 py-1.5 rounded-full text-sm font-semibold">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+          Ishonchli xizmatlar platformasi
+        </div>
+
+        <!-- Katta Sarlavha -->
+        <h1 class="text-5xl sm:text-[62px] font-extrabold tracking-tight text-slate-900 leading-[1.12]">
+          Ishonchli ustani topish <span class="text-blue-600">endi oson!</span>
+        </h1>
+
+        <!-- Tavsif -->
+        <p class="text-lg text-slate-500 max-w-xl leading-relaxed">
+          Yaqiningizdagi malakali mutaxassislarni toping, solishtiring va bir necha daqiqada bog‘laning.
+        </p>
+
+        <!-- Qidiruv Formasi (Ustalar bo'limiga o'tkazadi) -->
+        <form action="ustalar.html" method="GET" class="bg-white p-2.5 rounded-2xl shadow-xl shadow-slate-200/70 border border-slate-100 flex flex-col sm:flex-row items-center gap-2 max-w-2xl">
+          
+          <!-- Qidiruv input -->
+          <div class="flex items-center gap-3 flex-1 px-4 py-2.5 w-full">
+            <svg class="w-5 h-5 text-slate-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+            <input 
+              type="text" 
+              name="q" 
+              placeholder="Qanday xizmat kerak?" 
+              class="w-full outline-none text-slate-700 placeholder-slate-400 text-[15px]"
+            />
+          </div>
+
+          <!-- Ajratuvchi chiziq -->
+          <div class="hidden sm:block w-px h-8 bg-slate-200"></div>
+
+          <!-- Shahar tanlash -->
+          <div class="flex items-center gap-2 px-4 py-2.5 w-full sm:w-auto">
+            <svg class="w-5 h-5 text-slate-400 shrink-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <select name="city" class="outline-none text-slate-700 font-medium text-[15px] bg-transparent cursor-pointer">
+              <option value="Toshkent">Toshkent</option>
+              <option value="Samarqand">Samarqand</option>
+              <option value="Buxoro">Buxoro</option>
+              <option value="Andijon">Andijon</option>
+            </select>
+          </div>
+
+          <!-- Usta topish tugmasi -->
+          <button type="submit" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold px-7 py-3.5 rounded-xl flex items-center justify-center gap-2 transition shadow-md shadow-blue-600/20 cursor-pointer shrink-0">
+            <span>Usta topish</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </button>
+        </form>
+
+        <!-- Pastki ishonch belgilari -->
+        <div class="flex flex-wrap items-center gap-6 pt-2 text-sm text-slate-500 font-medium">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span>1 200+ mutaxassis</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span>Haqiqiy sharhlar</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+            </svg>
+            <span>Xavfsiz aloqa</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- O'ng ustun: Usta rasmi va suzuvchi kartochkalar (5 qism) -->
+      <div class="lg:col-span-5 relative flex justify-center">
+        <div class="relative w-full max-w-md">
+          <!-- Asosiy rasm ramkasi -->
+          <div class="rounded-[32px] overflow-hidden border-[8px] border-white shadow-2xl bg-slate-200 aspect-[4/5]">
+            <img 
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" 
+              alt="Malakali usta" 
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <!-- Reyting kartochkasi -->
+          <div class="absolute top-12 -left-8 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3.5">
+            <div class="w-11 h-11 rounded-xl bg-amber-50 text-amber-500 flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-bold text-slate-900 text-base">4.9 reyting</div>
+              <div class="text-xs text-slate-400">127 ta haqiqiy sharh</div>
+            </div>
+          </div>
+
+          <!-- Tekshirilgan usta kartochkasi -->
+          <div class="absolute bottom-6 left-4 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3.5">
+            <div class="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="font-bold text-slate-900 text-base">Tekshirilgan usta</div>
+              <div class="text-xs text-slate-400">Hujjatlari tasdiqlangan</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+
+  <!-- USTATOP AI SECTION -->
+<section class="ustatop-ai-wrapper">
+  <div class="ustatop-ai-banner">
+    <!-- Chap tomon -->
+    <div class="ustatop-ai-left">
+      <div class="ustatop-ai-badge">
+        <span class="ai-icon">✨</span> USTATOP AI
+      </div>
+      <h2>Muammongizni yozing — AI yordam beradi</h2>
+      <p>Muammoni oddiy tilda tasvirlang. Sun’iy intellekt mos xizmat turini tavsiya qiladi.</p>
+    </div>
+
+    <!-- O'ng tomon: Input va tugma qismi rasmdagidek bitta oq kartochka ichida -->
+    <div class="ustatop-ai-right">
+      <div class="ustatop-ai-card">
+        <div class="ustatop-ai-input-box">
+          <span class="chat-icon">💬</span>
+          <input 
+            id="aiProblemInput" 
+            type="text" 
+            placeholder="Uyimdagi kran suv oqizayapti" 
+          />
+        </div>
+        <button id="aiDetectBtn" type="button">
+          ✨ Muammoni aniqlash
+        </button>
+        <div class="ustatop-ai-security">
+          🛡️ Ma’lumotlaringiz xavfsiz saqlanadi
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NATIJA (USTALAR) -->
+  <div id="aiResultSection" class="ustatop-ai-results hidden">
+    <div class="ustatop-ai-results-header">
+      <h3 id="aiResultTitle">Tavsiya etilgan ustalar</h3>
+      <button id="aiCloseBtn" type="button">Yopish ✕</button>
+    </div>
+    <div id="aiMastersGrid" class="ustatop-ai-grid"></div>
+  </div>
+</section>
+
+<style>
+  .ustatop-ai-wrapper {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .ustatop-ai-banner {
+    background: #1d4ed8;
+    border-radius: 24px;
+    padding: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    color: #ffffff;
+    box-shadow: 0 20px 40px rgba(29, 78, 216, 0.2);
+  }
+
+  .ustatop-ai-left {
+    flex: 1;
+  }
+
+  .ustatop-ai-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #93c5fd;
+    margin-bottom: 14px;
+  }
+
+  .ustatop-ai-left h2 {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 16px 0;
+  }
+
+  .ustatop-ai-left p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #dbeafe;
+    margin: 0;
+    max-width: 460px;
+  }
+
+  .ustatop-ai-right {
+    flex: 1;
+    max-width: 480px;
+    width: 100%;
+  }
+
+  .ustatop-ai-card {
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .ustatop-ai-input-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+  }
+
+  .ustatop-ai-input-box input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    font-size: 15px;
+    color: #0f172a;
+  }
+
+  #aiDetectBtn {
+    width: 100%;
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  #aiDetectBtn:hover {
+    background: #1d4ed8;
+  }
+
+  .ustatop-ai-security {
+    text-align: center;
+    font-size: 11px;
+    color: #64748b;
+    margin-top: 10px;
+  }
+
+  .ustatop-ai-results {
+    margin-top: 32px;
+  }
+
+  .ustatop-ai-results.hidden {
+    display: none;
+  }
+
+  .ustatop-ai-results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .ustatop-ai-results-header h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+  }
+
+  #aiCloseBtn {
+    background: none;
+    border: none;
+    color: #64748b;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .ustatop-ai-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .ai-master-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  }
+
+  .ai-master-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .ai-master-top img {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  .ai-master-top h4 {
+    margin: 0 0 4px 0;
+    font-size: 17px;
+    color: #0f172a;
+  }
+
+  .ai-master-role {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0 0 2px 0;
+  }
+
+  .ai-master-meta {
+    color: #64748b;
+    font-size: 12px;
+    margin: 0;
+  }
+
+  .ai-master-footer {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid #f1f5f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ai-master-price {
+    font-weight: 700;
+    font-size: 14px;
+    color: #0f172a;
+  }
+
+  .ai-master-call {
+    background: #eff6ff;
+    color: #2563eb;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .ai-master-call:hover {
+    background: #2563eb;
+    color: #ffffff;
+  }
+
+  @media (max-width: 860px) {
+    .ustatop-ai-banner {
+      flex-direction: column;
+      padding: 32px 24px;
+    }
+    .ustatop-ai-right {
+      max-width: 100%;
+    }
+  }
+</style>
+
+<script>
+  const aiMastersData = [
+    { name: "Sardor Alimov", role: "Santexnik", city: "Toshkent", rating: "4.8", price: "100 000 so‘mdan", phone: "+998 90 111-22-33", img: "https://images.unsplash.com/photo-1540569014015-19a7be504e3a?auto=format&fit=crop&w=400&q=80" },
+    { name: "Jamshid Karimov", role: "Elektrik", city: "Toshkent", rating: "4.9", price: "80 000 so‘mdan", phone: "+998 90 222-33-44", img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=400&q=80" },
+    { name: "Otabek Tursunov", role: "Malyar / Remont", city: "Toshkent", rating: "5.0", price: "Kelishilgan holda", phone: "+998 90 333-44-55", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" },
+    { name: "Dilshod Nazarov", role: "Konditsioner ustasi", city: "Toshkent", rating: "4.7", price: "120 000 so‘mdan", phone: "+998 90 444-55-66", img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80" }
+  ];
+
+  const aiInput = document.getElementById("aiProblemInput");
+  const aiDetectBtn = document.getElementById("aiDetectBtn");
+  const aiCloseBtn = document.getElementById("aiCloseBtn");
+  const aiResultSection = document.getElementById("aiResultSection");
+  const aiResultTitle = document.getElementById("aiResultTitle");
+  const aiMastersGrid = document.getElementById("aiMastersGrid");
+
+  aiDetectBtn.addEventListener("click", () => {
+    const text = aiInput.value.toLowerCase().trim();
+    if (!text) {
+      aiInput.focus();
+      return;
+    }
+
+    let detectedRole = "Santexnik";
+    if (text.includes("rozetka") || text.includes("svet") || text.includes("tok") || text.includes("elektr")) {
+      detectedRole = "Elektrik";
+    } else if (text.includes("kran") || text.includes("suv") || text.includes("truba") || text.includes("unitaz")) {
+      detectedRole = "Santexnik";
+    } else if (text.includes("devor") || text.includes("oboy") || text.includes("kraska")) {
+      detectedRole = "Malyar / Remont";
+    } else if (text.includes("konditsioner") || text.includes("sovutish")) {
+      detectedRole = "Konditsioner ustasi";
+    }
+
+    const matched = aiMastersData.filter(m => m.role.toLowerCase().includes(detectedRole.toLowerCase()));
+    const listToShow = matched.length > 0 ? matched : aiMastersData;
+
+    aiResultTitle.textContent = `"${text}" bo‘yicha tavsiya etilgan ustalar:`;
+    aiMastersGrid.innerHTML = listToShow.map(m => `
+      <div class="ai-master-card">
+        <div class="ai-master-top">
+          <img src="${m.img}" alt="${m.name}" />
+          <div>
+            <h4>${m.name}</h4>
+            <p class="ai-master-role">${m.role}</p>
+            <p class="ai-master-meta">⭐ ${m.rating} • 📍 ${m.city}</p>
+          </div>
+        </div>
+        <div class="ai-master-footer">
+          <span class="ai-master-price">${m.price}</span>
+          <button class="ai-master-call" onclick="alert('${m.name}: ${m.phone}')">Bog‘lanish</button>
+        </div>
+      </div>
+    `).join("");
+
+    aiResultSection.classList.remove("hidden");
+    aiResultSection.scrollIntoView({ behavior: "smooth" });
+  });
+
+  aiCloseBtn.addEventListener("click", () => {
+    aiResultSection.classList.add("hidden");
+  });
+</script>
+
+    <!-- OMMABOP XIZMATLAR SECTION -->
+<section class="services-section">
+  <div class="services-header">
+    <div>
+      <span class="services-badge">OMMABOP XIZMATLAR</span>
+      <h2 class="services-title">Kerakli xizmatni tanlang</h2>
+      <p class="services-subtitle">Uy va ofis uchun tajribali mutaxassislar</p>
+    </div>
+
+    <button type="button" onclick="goToUstaTopAI()" class="all-services-btn">
+      Barcha xizmatlar <span>→</span>
+    </button>
+  </div>
+
+  <!-- 6 TA XIZMAT KARTOCHKASI -->
+  <div class="services-grid">
+    <!-- 1. Elektrik -->
+    <div class="service-card" onclick="showServiceMasters('Elektrik')">
+      <div class="service-card-left">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <div class="service-info">
+          <h3>Elektrik</h3>
+          <p>Sim, rozetka va yoritish</p>
+          <span class="master-count">214 nafar usta</span>
+        </div>
+      </div>
+      <span class="service-arrow">›</span>
+    </div>
+
+    <!-- 2. Santexnik -->
+    <div class="service-card" onclick="showServiceMasters('Santexnik')">
+      <div class="service-card-left">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 10h4v4H4v-4zm4 2h8m0 0v4h4v-4h-4zm-4-5v3m-2-3h4"/>
+          </svg>
+        </div>
+        <div class="service-info">
+          <h3>Santexnik</h3>
+          <p>Quvur, kran va isitish</p>
+          <span class="master-count">186 nafar usta</span>
+        </div>
+      </div>
+      <span class="service-arrow">›</span>
+    </div>
+
+    <!-- 3. Kompyuter ustasi -->
+    <div class="service-card" onclick="showServiceMasters('Kompyuter ustasi')">
+      <div class="service-card-left">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+        </div>
+        <div class="service-info">
+          <h3>Kompyuter ustasi</h3>
+          <p>Noutbuk va kompyuter ta’miri</p>
+          <span class="master-count">142 nafar usta</span>
+        </div>
+      </div>
+      <span class="service-arrow">›</span>
+    </div>
+
+    <!-- 4. Maishiy texnika -->
+    <div class="service-card" onclick="showServiceMasters('Maishiy texnika')">
+      <div class="service-card-left">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <rect x="4" y="2" width="16" height="20" rx="2"/>
+            <circle cx="12" cy="14" r="4"/>
+            <path d="M8 6h.01M12 6h.01"/>
+          </svg>
+        </div>
+        <div class="service-info">
+          <h3>Maishiy texnika</h3>
+          <p>Uy jihozlarini ta’mirlash</p>
+          <span class="master-count">128 nafar usta</span>
+        </div>
+      </div>
+      <span class="service-arrow">›</span>
+    </div>
+
+    <!-- 5. Bo'yoqchi -->
+    <div class="service-card" onclick="showServiceMasters('Bo‘yoqchi')">
+      <div class="service-card-left">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 3H5a2 2 0 00-2 2v3a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm-7 7v4l-2 2v5h4v-5l-2-2v-4z"/>
+          </svg>
+        </div>
+        <div class="service-info">
+          <h3>Bo‘yoqchi</h3>
+          <p>Devor va fasad ishlari</p>
+          <span class="master-count">96 nafar usta</span>
+        </div>
+      </div>
+      <span class="service-arrow">›</span>
+    </div>
+
+    <!-- 6. Tozalash -->
+    <div class="service-card" onclick="showServiceMasters('Tozalash')">
+      <div class="service-card-left">
+        <div class="service-icon">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+          </svg>
+        </div>
+        <div class="service-info">
+          <h3>Tozalash</h3>
+          <p>Uy va ofis tozalash</p>
+          <span class="master-count">173 nafar usta</span>
+        </div>
+      </div>
+      <span class="service-arrow">›</span>
+    </div>
+  </div>
+
+  <!-- TANLANGAN XIZMAT BO'YICHA USTALAR RO'YXATI -->
+  <div id="serviceMastersBox" class="service-masters-box hidden">
+    <div class="service-masters-top">
+      <h3 id="selectedServiceTitle">Tanlangan xizmat ustalari</h3>
+      <button type="button" onclick="closeServiceMasters()">Yopish ✕</button>
+    </div>
+    <div id="serviceMastersList" class="service-masters-grid"></div>
+  </div>
+</section>
+
+<style>
+  .services-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .services-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 32px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .services-badge {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #2563eb;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  .services-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.02em;
+  }
+
+  .services-subtitle {
+    font-size: 16px;
+    color: #64748b;
+    margin: 0;
+  }
+
+  .all-services-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    color: #0f172a;
+    border: 1px solid #e2e8f0;
+    padding: 12px 22px;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    transition: all 0.2s ease;
+  }
+
+  .all-services-btn:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.1);
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .service-card {
+    background: #ffffff;
+    border: 1px solid #eef2f6;
+    border-radius: 18px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.22s ease;
+  }
+
+  .service-card:hover {
+    border-color: #bfdbfe;
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
+    transform: translateY(-2px);
+  }
+
+  .service-card-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .service-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: #eff6ff;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.22s ease;
+  }
+
+  .service-card:hover .service-icon {
+    background: #2563eb;
+    color: #ffffff;
+  }
+
+  .service-info h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 4px 0;
+  }
+
+  .service-info p {
+    font-size: 13.5px;
+    color: #64748b;
+    margin: 0 0 8px 0;
+  }
+
+  .master-count {
+    font-size: 13px;
+    font-weight: 600;
+    color: #2563eb;
+  }
+
+  .service-arrow {
+    font-size: 22px;
+    color: #94a3b8;
+    transition: transform 0.2s, color 0.2s;
+  }
+
+  .service-card:hover .service-arrow {
+    color: #2563eb;
+    transform: translateX(4px);
+  }
+
+  /* Ustalar ro'yxati bloki */
+  .service-masters-box {
+    margin-top: 32px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 24px;
+  }
+
+  .service-masters-box.hidden {
+    display: none;
+  }
+
+  .service-masters-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .service-masters-top h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .service-masters-top button {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+    cursor: pointer;
+  }
+
+  .service-masters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+
+  .s-master-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .s-master-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .s-master-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  .s-master-header h4 {
+    margin: 0 0 3px 0;
+    font-size: 16px;
+    color: #0f172a;
+  }
+
+  .s-master-header span {
+    font-size: 12.5px;
+    color: #64748b;
+  }
+
+  .s-master-bottom {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid #f1f5f9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .s-master-bottom strong {
+    font-size: 14px;
+    color: #0f172a;
+  }
+
+  .s-master-bottom button {
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .s-master-bottom button:hover {
+    background: #1d4ed8;
+  }
+
+  @media (max-width: 960px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  const serviceMastersDB = {
+    "Elektrik": [
+      { name: "Jamshid Karimov", exp: "8 yil tajriba", rating: "4.9", price: "80 000 so‘mdan", phone: "+998 90 123-45-01", img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=300&q=80" },
+      { name: "Azizbek Yusupov", exp: "6 yil tajriba", rating: "4.8", price: "70 000 so‘mdan", phone: "+998 90 123-45-02", img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&q=80" }
+    ],
+    "Santexnik": [
+      { name: "Sardor Alimov", exp: "7 yil tajriba", rating: "4.9", price: "100 000 so‘mdan", phone: "+998 90 234-56-01", img: "https://images.unsplash.com/photo-1540569014015-19a7be504e3a?auto=format&fit=crop&w=300&q=80" },
+      { name: "Rustam Qodirov", exp: "9 yil tajriba", rating: "5.0", price: "90 000 so‘mdan", phone: "+998 90 234-56-02", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" }
+    ],
+    "Kompyuter ustasi": [
+      { name: "Bekzod Normatov", exp: "5 yil tajriba", rating: "4.9", price: "60 000 so‘mdan", phone: "+998 90 345-67-01", img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=300&q=80" },
+      { name: "Sanjar Tursunov", exp: "7 yil tajriba", rating: "4.8", price: "80 000 so‘mdan", phone: "+998 90 345-67-02", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" }
+    ],
+    "Maishiy texnika": [
+      { name: "Dilshod Nazarov", exp: "6 yil tajriba", rating: "4.7", price: "110 000 so‘mdan", phone: "+998 90 456-78-01", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80" }
+    ],
+    "Bo‘yoqchi": [
+      { name: "Otabek Xolmatov", exp: "10 yil tajriba", rating: "5.0", price: "Kelishilgan holda", phone: "+998 90 567-89-01", img: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80" }
+    ],
+    "Tozalash": [
+      { name: "Nilufar Karimova", exp: "4 yil tajriba", rating: "4.9", price: "150 000 so‘mdan", phone: "+998 90 678-90-01", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" }
+    ]
+  };
+
+  function showServiceMasters(category) {
+    const box = document.getElementById("serviceMastersBox");
+    const title = document.getElementById("selectedServiceTitle");
+    const list = document.getElementById("serviceMastersList");
+    const masters = serviceMastersDB[category] || [];
+
+    title.textContent = `${category} bo‘yicha mavjud ustalar`;
+    list.innerHTML = masters.map(m => `
+      <div class="s-master-item">
+        <div class="s-master-header">
+          <img src="${m.img}" alt="${m.name}" />
+          <div>
+            <h4>${m.name}</h4>
+            <span>⭐ ${m.rating} • ${m.exp}</span>
+          </div>
+        </div>
+        <div class="s-master-bottom">
+          <strong>${m.price}</strong>
+          <button type="button" onclick="alert('${m.name} bilan bog‘lanish: ${m.phone}')">Bog‘lanish</button>
+        </div>
+      </div>
+    `).join("");
+
+    box.classList.remove("hidden");
+    box.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+
+  function closeServiceMasters() {
+    document.getElementById("serviceMastersBox").classList.add("hidden");
+  }
+
+  function goToUstaTopAI() {
+    const aiSection = document.querySelector(".ustatop-ai-wrapper");
+    const aiInput = document.getElementById("aiProblemInput");
+    
+    if (aiSection) {
+      aiSection.scrollIntoView({ behavior: "smooth", block: "center" });
+      setTimeout(() => {
+        if (aiInput) aiInput.focus();
+      }, 500);
+    }
+  }
+</script>
+
+    <!-- YUQORI BAHOLANGAN USTALAR SECTION -->
+<section class="top-masters-section">
+  <div class="top-masters-header">
+    <div>
+      <span class="top-masters-badge">TAVSIYA ETILADI</span>
+      <h2 class="top-masters-title">Yuqori baholangan ustalar</h2>
+      <p class="top-masters-subtitle">Mijozlar ishonchini qozongan mutaxassislar</p>
+    </div>
+
+    <button type="button" onclick="toggleAllMasters()" id="allMastersBtn" class="all-masters-btn">
+      Barcha ustalar <span>→</span>
+    </button>
+  </div>
+
+  <!-- 3 TA ASOSIY USTA KARTOCHKASI -->
+  <div class="top-masters-grid">
+    <!-- 1-usta -->
+    <div class="master-card">
+      <div class="master-img-box">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80" alt="Azizbek Karimov" />
+      </div>
+      <div class="master-content">
+        <div class="master-name-row">
+          <h3>Azizbek Karimov</h3>
+          <span class="verified-badge" title="Tasdiqlangan">✓</span>
+        </div>
+        <p class="master-role">Elektrik ustasi</p>
+        <div class="master-rating-row">
+          <span class="star">⭐</span>
+          <strong>4.9</strong>
+          <span class="reviews">(127 sharh)</span>
+          <span class="dot">•</span>
+          <span class="exp">8 yil tajriba</span>
+        </div>
+        <div class="master-footer">
+          <div>
+            <span class="price-label">Xizmat narxi</span>
+            <strong class="price-value">120 000 so‘mdan</strong>
+          </div>
+          <button type="button" onclick="openProfile('Azizbek Karimov', 'Elektrik ustasi', '4.9', '127', '8 yil', '120 000 so‘mdan', '+998 90 111-22-33', 'Toshkent sh., Chilonzor tumani. Sifatli va kafolatli elektr montaj xizmatlari.', 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80')" class="profile-btn">
+            Profilni ko‘rish
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2-usta -->
+    <div class="master-card">
+      <div class="master-img-box">
+        <img src="https://images.unsplash.com/photo-1540569014015-19a7be504e3a?auto=format&fit=crop&w=600&q=80" alt="Sardor Rahimov" />
+      </div>
+      <div class="master-content">
+        <div class="master-name-row">
+          <h3>Sardor Rahimov</h3>
+          <span class="verified-badge" title="Tasdiqlangan">✓</span>
+        </div>
+        <p class="master-role">Santexnik</p>
+        <div class="master-rating-row">
+          <span class="star">⭐</span>
+          <strong>4.8</strong>
+          <span class="reviews">(94 sharh)</span>
+          <span class="dot">•</span>
+          <span class="exp">6 yil tajriba</span>
+        </div>
+        <div class="master-footer">
+          <div>
+            <span class="price-label">Xizmat narxi</span>
+            <strong class="price-value">100 000 so‘mdan</strong>
+          </div>
+          <button type="button" onclick="openProfile('Sardor Rahimov', 'Santexnik', '4.8', '94', '6 yil', '100 000 so‘mdan', '+998 90 222-33-44', 'Suv quvurlari, kran va isitish tizimlarini o‘rnatish va ta’mirlash.', 'https://images.unsplash.com/photo-1540569014015-19a7be504e3a?auto=format&fit=crop&w=600&q=80')" class="profile-btn">
+            Profilni ko‘rish
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3-usta -->
+    <div class="master-card">
+      <div class="master-img-box pink-bg">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Jamshid Soliyev" />
+      </div>
+      <div class="master-content">
+        <div class="master-name-row">
+          <h3>Jamshid Soliyev</h3>
+          <span class="verified-badge" title="Tasdiqlangan">✓</span>
+        </div>
+        <p class="master-role">Maishiy texnika ustasi</p>
+        <div class="master-rating-row">
+          <span class="star">⭐</span>
+          <strong>4.7</strong>
+          <span class="reviews">(68 sharh)</span>
+          <span class="dot">•</span>
+          <span class="exp">5 yil tajriba</span>
+        </div>
+        <div class="master-footer">
+          <div>
+            <span class="price-label">Xizmat narxi</span>
+            <strong class="price-value">90 000 so‘mdan</strong>
+          </div>
+          <button type="button" onclick="openProfile('Jamshid Soliyev', 'Maishiy texnika ustasi', '4.7', '68', '5 yil', '90 000 so‘mdan', '+998 90 333-44-55', 'Kir yuvish mashinasi, muzlatkich va konditsionerlarni uyingizga kelib tuzatish.', 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80')" class="profile-btn">
+            Profilni ko‘rish
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BARCHA USTALAR (Barcha ustalar tugmasi bosilganda ochiladigan qo'shimcha qism) -->
+  <div id="allMastersBox" class="all-masters-hidden-box hidden">
+    <h3 class="extra-title">Barcha ro‘yxatdagi ustalar</h3>
+    <div class="top-masters-grid">
+      <!-- 4-usta -->
+      <div class="master-card">
+        <div class="master-img-box">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="Bobur Rahimov" />
+        </div>
+        <div class="master-content">
+          <div class="master-name-row">
+            <h3>Bobur Rahimov</h3>
+            <span class="verified-badge">✓</span>
+          </div>
+          <p class="master-role">Duradgor</p>
+          <div class="master-rating-row">
+            <span class="star">⭐</span>
+            <strong>4.9</strong>
+            <span class="reviews">(81 sharh)</span>
+            <span class="dot">•</span>
+            <span class="exp">7 yil tajriba</span>
+          </div>
+          <div class="master-footer">
+            <div>
+              <span class="price-label">Xizmat narxi</span>
+              <strong class="price-value">90 000 so‘mdan</strong>
+            </div>
+            <button type="button" onclick="openProfile('Bobur Rahimov', 'Duradgor', '4.9', '81', '7 yil', '90 000 so‘mdan', '+998 90 444-55-66', 'Mebel yig‘ish, eshik va rom o‘rnatish.', 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80')" class="profile-btn">
+              Profilni ko‘rish
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5-usta -->
+      <div class="master-card">
+        <div class="master-img-box">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" alt="Dilshod Nazarov" />
+        </div>
+        <div class="master-content">
+          <div class="master-name-row">
+            <h3>Dilshod Nazarov</h3>
+            <span class="verified-badge">✓</span>
+          </div>
+          <p class="master-role">Konditsioner ustasi</p>
+          <div class="master-rating-row">
+            <span class="star">⭐</span>
+            <strong>4.7</strong>
+            <span class="reviews">(52 sharh)</span>
+            <span class="dot">•</span>
+            <span class="exp">5 yil tajriba</span>
+          </div>
+          <div class="master-footer">
+            <div>
+              <span class="price-label">Xizmat narxi</span>
+              <strong class="price-value">120 000 so‘mdan</strong>
+            </div>
+            <button type="button" onclick="openProfile('Dilshod Nazarov', 'Konditsioner ustasi', '4.7', '52', '5 yil', '120 000 so‘mdan', '+998 90 555-66-77', 'Konditsioner o‘rnatish, tozalash va freon quyish.', 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80')" class="profile-btn">
+              Profilni ko‘rish
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6-usta -->
+      <div class="master-card">
+        <div class="master-img-box">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=600&q=80" alt="Azizbek Yusupov" />
+        </div>
+        <div class="master-content">
+          <div class="master-name-row">
+            <h3>Azizbek Yusupov</h3>
+            <span class="verified-badge">✓</span>
+          </div>
+          <p class="master-role">Malyar / Remont</p>
+          <div class="master-rating-row">
+            <span class="star">⭐</span>
+            <strong>4.9</strong>
+            <span class="reviews">(110 sharh)</span>
+            <span class="dot">•</span>
+            <span class="exp">9 yil tajriba</span>
+          </div>
+          <div class="master-footer">
+            <div>
+              <span class="price-label">Xizmat narxi</span>
+              <strong class="price-value">Kelishilgan</strong>
+            </div>
+            <button type="button" onclick="openProfile('Azizbek Yusupov', 'Malyar / Remont', '4.9', '110', '9 yil', 'Kelishilgan', '+998 90 666-77-88', 'Kvartiralarni sifatli ta’mirlash va oboy yopishtirish.', 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=600&q=80')" class="profile-btn">
+              Profilni ko‘rish
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- USTA PROFILI MODAL OYNASI -->
+  <div id="profileModal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <button type="button" class="modal-close" onclick="closeProfile()">✕</button>
+      <div class="modal-header">
+        <img id="mAvatar" src="" alt="Usta rasmi" />
+        <div>
+          <h3 id="mName">Usta ismi</h3>
+          <p id="mRole" class="modal-role">Kasbi</p>
+          <span id="mRatingExp" class="modal-meta">Reyting va tajriba</span>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="modal-info-row">
+          <span>Ish haqi:</span>
+          <strong id="mPrice">0 so‘m</strong>
+        </div>
+        <div class="modal-info-row">
+          <span>Telefon raqam:</span>
+          <strong id="mPhone" class="phone-highlight">+998 -- --- -- --</strong>
+        </div>
+        <div class="modal-desc-box">
+          <h4>Mutaxassis haqida:</h4>
+          <p id="mDesc">Ma'lumot...</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="mCallBtn" class="modal-call-btn">Qo‘ng‘iroq qilish</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .top-masters-section {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .top-masters-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 32px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .top-masters-badge {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #2563eb;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  .top-masters-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 8px 0;
+    letter-spacing: -0.02em;
+  }
+
+  .top-masters-subtitle {
+    font-size: 16px;
+    color: #64748b;
+    margin: 0;
+  }
+
+  .all-masters-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    color: #0f172a;
+    border: 1px solid #e2e8f0;
+    padding: 12px 22px;
+    border-radius: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    transition: all 0.2s ease;
+  }
+
+  .all-masters-btn:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.1);
+  }
+
+  .top-masters-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .master-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .master-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  }
+
+  .master-img-box {
+    width: 100%;
+    height: 240px;
+    background: #e2e8f0;
+    overflow: hidden;
+  }
+
+  .master-img-box.pink-bg {
+    background: #f472b6;
+  }
+
+  .master-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .master-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+  }
+
+  .master-name-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4px;
+  }
+
+  .master-name-row h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+  }
+
+  .verified-badge {
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+
+  .master-role {
+    font-size: 14px;
+    color: #64748b;
+    margin: 0 0 16px 0;
+  }
+
+  .master-rating-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #0f172a;
+    margin-bottom: 24px;
+  }
+
+  .star {
+    color: #f59e0b;
+  }
+
+  .reviews {
+    color: #64748b;
+  }
+
+  .dot {
+    color: #cbd5e1;
+  }
+
+  .exp {
+    color: #64748b;
+  }
+
+  .master-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    border-top: 1px solid #f1f5f9;
+  }
+
+  .price-label {
+    display: block;
+    font-size: 11px;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .price-value {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f172a;
+  }
+
+  .profile-btn {
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .profile-btn:hover {
+    background: #1d4ed8;
+  }
+
+  /* Barcha ustalar paneli */
+  .all-masters-hidden-box {
+    margin-top: 32px;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .all-masters-hidden-box.hidden {
+    display: none;
+  }
+
+  .extra-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 20px;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Modal Oyna */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  .modal-overlay.hidden {
+    display: none;
+  }
+
+  .modal-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 24px;
+    padding: 28px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #f1f5f9;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    color: #64748b;
+  }
+
+  .modal-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .modal-header img {
+    width: 72px;
+    height: 72px;
+    border-radius: 16px;
+    object-fit: cover;
+  }
+
+  .modal-header h3 {
+    margin: 0 0 4px 0;
+    font-size: 20px;
+    color: #0f172a;
+  }
+
+  .modal-role {
+    margin: 0 0 4px 0;
+    font-size: 14px;
+    color: #2563eb;
+    font-weight: 600;
+  }
+
+  .modal-meta {
+    font-size: 13px;
+    color: #64748b;
+  }
+
+  .modal-body {
+    border-top: 1px solid #f1f5f9;
+    border-bottom: 1px solid #f1f5f9;
+    padding: 16px 0;
+    margin-bottom: 20px;
+  }
+
+  .modal-info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #475569;
+  }
+
+  .phone-highlight {
+    color: #2563eb;
+    font-size: 17px;
+  }
+
+  .modal-desc-box h4 {
+    margin: 0 0 6px 0;
+    font-size: 14px;
+    color: #0f172a;
+  }
+
+  .modal-desc-box p {
+    margin: 0;
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.5;
+  }
+
+  .modal-footer {
+    display: flex;
+  }
+
+  .modal-call-btn {
+    width: 100%;
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .modal-call-btn:hover {
+    background: #1d4ed8;
+  }
+
+  @media (max-width: 960px) {
+    .top-masters-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .top-masters-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  // Barcha ustalar tugmasi bosilganda ochib-yopish
+  function toggleAllMasters() {
+    const box = document.getElementById("allMastersBox");
+    const btn = document.getElementById("allMastersBtn");
+    
+    if (box.classList.contains("hidden")) {
+      box.classList.remove("hidden");
+      btn.innerHTML = `Yopish <span>↑</span>`;
+      box.scrollIntoView({ behavior: "smooth" });
+    } else {
+      box.classList.add("hidden");
+      btn.innerHTML = `Barcha ustalar <span>→</span>`;
+    }
+  }
+
+  // Profilni ko'rish modal oynasini ochish
+  function openProfile(name, role, rating, reviews, exp, price, phone, desc, img) {
+    document.getElementById("mName").textContent = name;
+    document.getElementById("mRole").textContent = role;
+    document.getElementById("mRatingExp").textContent = `⭐ ${rating} (${reviews} sharh) • ${exp}`;
+    document.getElementById("mPrice").textContent = price;
+    document.getElementById("mPhone").textContent = phone;
+    document.getElementById("mDesc").textContent = desc;
+    document.getElementById("mAvatar").src = img;
+    
+    // Qo'ng'iroq qilish tugmasiga tel raqamni ulash
+    document.getElementById("mCallBtn").onclick = function() {
+      alert(`${name} bilan bog‘lanish raqami: ${phone}`);
+    };
+
+    document.getElementById("profileModal").classList.remove("hidden");
+  }
+
+  // Modal oynani yopish
+  function closeProfile() {
+    document.getElementById("profileModal").classList.add("hidden");
+  }
+</script>
+
+    <!-- NEGA USTATOP SECTION -->
+<section class="why-ustatop-section">
+  <div class="why-ustatop-header">
+    <span class="why-badge">NEGA USTATOP?</span>
+    <h2 class="why-title">Har bir buyurtmada xotirjamlik</h2>
+    <p class="why-subtitle">Tanlovingiz ishonchli bo‘lishi uchun muhim jihatlarni bir joyga jamladik.</p>
+  </div>
+
+  <div class="why-cards-grid">
+    <!-- 1-karta -->
+    <div class="why-card">
+      <div class="why-icon">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+        </svg>
+      </div>
+      <h3>Tekshirilgan profillar</h3>
+      <p>Tasdiqlangan ustalarni maxsus belgi orqali oson ajrating.</p>
+    </div>
+
+    <!-- 2-karta -->
+    <div class="why-card">
+      <div class="why-icon">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+        </svg>
+      </div>
+      <h3>Haqiqiy sharhlar</h3>
+      <p>Xizmat olgan mijozlarning baholari asosida tanlang.</p>
+    </div>
+
+    <!-- 3-karta -->
+    <div class="why-card">
+      <div class="why-icon">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+        </svg>
+      </div>
+      <h3>Tez va qulay aloqa</h3>
+      <p>Usta bilan to‘g‘ridan-to‘g‘ri, xavfsiz bog‘laning.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .why-ustatop-section {
+    max-width: 1200px;
+    margin: 70px auto;
+    padding: 0 20px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    text-align: center;
+  }
+
+  .why-ustatop-header {
+    margin-bottom: 48px;
+  }
+
+  .why-badge {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #2563eb;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .why-title {
+    font-size: 38px;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 12px 0;
+    letter-spacing: -0.02em;
+  }
+
+  .why-subtitle {
+    font-size: 16px;
+    color: #64748b;
+    margin: 0 auto;
+    max-width: 540px;
+  }
+
+  .why-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .why-card {
+    background: #ffffff;
+    border: 1px solid #eef2f6;
+    border-radius: 24px;
+    padding: 44px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02);
+  }
+
+  .why-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: #eff6ff;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  .why-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 12px 0;
+  }
+
+  .why-card p {
+    font-size: 15px;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 260px;
+  }
+
+  @media (max-width: 860px) {
+    .why-cards-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+    <!-- MIJOZLAR FIKRI SECTION -->
+<section class="testimonials-section">
+  <div class="testimonials-header">
+    <span class="testimonials-badge">MIJOZLAR FIKRI</span>
+    <h2 class="testimonials-title">UstaTop bilan hal bo‘lgan muammolar</h2>
+  </div>
+
+  <div class="testimonials-grid">
+    <!-- 1-sharh -->
+    <div class="testimonial-card">
+      <div class="testimonial-rating">
+        <span class="star">⭐</span>
+        <strong>5.0</strong>
+      </div>
+      <p class="testimonial-text">
+        “Kechqurun elektrda muammo bo‘ldi. Azizbek aka 40 daqiqada yetib kelib, nosozlikni tez hal qildi.”
+      </p>
+      <div class="testimonial-author">
+        <div class="author-avatar blue-bg">MN</div>
+        <div>
+          <h4>Madina N.</h4>
+          <span>Yunusobod, Toshkent</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2-sharh -->
+    <div class="testimonial-card">
+      <div class="testimonial-rating">
+        <span class="star">⭐</span>
+        <strong>5.0</strong>
+      </div>
+      <p class="testimonial-text">
+        “Usta tanlash juda oson ekan. Narxni oldindan kelishdik va ish sifatli bajarildi. Albatta yana foydalanaman.”
+      </p>
+      <div class="testimonial-author">
+        <div class="author-avatar blue-bg">OA</div>
+        <div>
+          <h4>Oybek A.</h4>
+          <span>Samarqand shahri</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3-sharh -->
+    <div class="testimonial-card">
+      <div class="testimonial-rating">
+        <span class="star">⭐</span>
+        <strong>4.9</strong>
+      </div>
+      <p class="testimonial-text">
+        “AI yordamchiga muammoni yozdim, u menga to‘g‘ri toifani tavsiya qildi. Vaqtim ancha tejaldi.”
+      </p>
+      <div class="testimonial-author">
+        <div class="author-avatar blue-bg">DS</div>
+        <div>
+          <h4>Dilnoza S.</h4>
+          <span>Mirzo Ulug‘bek, Toshkent</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .testimonials-section {
+    max-width: 1200px;
+    margin: 70px auto;
+    padding: 0 20px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    text-align: center;
+  }
+
+  .testimonials-header {
+    margin-bottom: 48px;
+  }
+
+  .testimonials-badge {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #2563eb;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .testimonials-title {
+    font-size: 38px;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+    letter-spacing: -0.02em;
+  }
+
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    text-align: left;
+  }
+
+  .testimonial-card {
+    background: #ffffff;
+    border: 1px solid #eef2f6;
+    border-radius: 24px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.02);
+  }
+
+  .testimonial-rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #0f172a;
+  }
+
+  .star {
+    color: #f59e0b;
+  }
+
+  .testimonial-text {
+    font-size: 16px;
+    color: #334155;
+    line-height: 1.6;
+    margin: 0 0 28px 0;
+  }
+
+  .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-top: 20px;
+    border-top: 1px solid #f1f5f9;
+  }
+
+  .author-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1d4ed8;
+    background: #eff6ff;
+    flex-shrink: 0;
+  }
+
+  .testimonial-author h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 2px 0;
+  }
+
+  .testimonial-author span {
+    font-size: 13px;
+    color: #64748b;
+  }
+
+  @media (max-width: 960px) {
+    .testimonials-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+  <!-- Banner qismi -->
+<div class="ustatop-banner">
+  <div class="banner-content">
+    <span class="banner-tag">MUTAXASSISLAR UCHUN</span>
+    <h2 class="banner-title">Mahoratingizni minglab mijozlarga ko‘rsating</h2>
+    <p class="banner-subtitle">UstaTop’ga qo‘shiling, yangi buyurtmalar oling va biznesingizni rivojlantiring.</p>
+  </div>
+  <div class="banner-action">
+    <button id="joinMasterBtn" class="join-btn">
+      Usta sifatida qo‘shilish <span>→</span>
+    </button>
+  </div>
+</div>
+
+<!-- Mashhur usta haqida modal oyna -->
+<div id="masterModal" class="master-modal">
+  <div class="modal-card">
+    <button id="closeModalBtn" class="close-btn">&times;</button>
+    <div class="master-badge">★ TOP USTA</div>
+    <h3 class="master-name">Akmaljon Yusupov</h3>
+    <p class="master-job">Oliy toifali Elektrik va Smart-Home mutaxassisi</p>
+    <div class="master-stats">
+      <div><strong>14 yil</strong><span>Tajriba</span></div>
+      <div><strong>4.9 ★</strong><span>Reyting (320+ baho)</span></div>
+      <div><strong>Toshkent</strong><span>Hudud</span></div>
+    </div>
+    <p class="master-bio">
+      UstaTop platformasi orqali oyiga o‘rtacha 45+ ta yirik buyurtma oladi. Murakkab elektr montaj ishlari va zamonaviy yoritish tizimlari bo‘yicha shahardagi eng mashhur ustalardan biri.
+    </p>
+    <button id="okModalBtn" class="modal-cta">Men ham shunday usta bo‘lmoqchiman</button>
+  </div>
+</div>
+
+<style>
+  .ustatop-banner {
+    background-color: #1D5CE6;
+    border-radius: 24px;
+    padding: 48px 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #ffffff;
+    max-width: 1200px;
+    margin: 20px auto;
+    box-sizing: border-box;
+  }
+
+  .banner-content {
+    max-width: 650px;
+  }
+
+  .banner-tag {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 16px;
+  }
+
+  .banner-title {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin: 0 0 16px 0;
+    letter-spacing: -0.5px;
+  }
+
+  .banner-subtitle {
+    font-size: 16px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+  }
+
+  .join-btn {
+    background-color: #ffffff;
+    color: #1D5CE6;
+    border: none;
+    border-radius: 14px;
+    padding: 16px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .join-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Modal stillari */
+  .master-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 16px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .master-modal.active {
+    display: flex;
+  }
+
+  .modal-card {
+    background: #ffffff;
+    color: #0f172a;
+    border-radius: 20px;
+    padding: 32px;
+    max-width: 440px;
+    width: 100%;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    animation: popIn 0.25s ease;
+  }
+
+  @keyframes popIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 26px;
+    color: #64748b;
+    cursor: pointer;
+  }
+
+  .master-badge {
+    display: inline-block;
+    background: #EFF6FF;
+    color: #1D5CE6;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 99px;
+    margin-bottom: 12px;
+  }
+
+  .master-name {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+  }
+
+  .master-job {
+    font-size: 14px;
+    color: #475569;
+    margin: 0 0 20px 0;
+  }
+
+  .master-stats {
+    display: flex;
+    justify-content: space-between;
+    background: #F8FAFC;
+    padding: 14px 16px;
+    border-radius: 12px;
+    margin-bottom: 18px;
+    text-align: center;
+  }
+
+  .master-stats strong {
+    display: block;
+    font-size: 16px;
+    color: #1D5CE6;
+  }
+
+  .master-stats span {
+    font-size: 12px;
+    color: #64748b;
+  }
+
+  .master-bio {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #334155;
+    margin: 0 0 24px 0;
+  }
+
+  .modal-cta {
+    width: 100%;
+    background: #1D5CE6;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .modal-cta:hover {
+    background: #1749B8;
+  }
+
+  @media (max-width: 768px) {
+    .ustatop-banner {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 32px 24px;
+    }
+    .banner-title {
+      font-size: 28px;
+    }
+  }
+</style>
+
+<script>
+  const joinBtn = document.getElementById('joinMasterBtn');
+  const modal = document.getElementById('masterModal');
+  const closeBtn = document.getElementById('closeModalBtn');
+  const okBtn = document.getElementById('okModalBtn');
+
+  joinBtn.addEventListener('click', () => {
+    modal.classList.add('active');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+  });
+
+  okBtn.addEventListener('click', () => {
+    modal.classList.remove('active');
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('active');
+    }
+  });
+</script>
+
+    <footer class="ustatop-footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <!-- Logotip va tavsif -->
+      <div class="footer-brand">
+        <a href="#" class="brand-logo">
+          <div class="logo-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+              <path d="m14 14 5 5"/>
+              <path d="m5 5 5 5"/>
+            </svg>
+          </div>
+          <span class="logo-text">Usta<span>Top</span></span>
+        </a>
+        <p class="brand-desc">
+          Ishonchli ustalarni topish uchun O‘zbekistondagi zamonaviy xizmatlar platformasi.
+        </p>
+      </div>
+
+      <!-- Platforma ustuni -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Platforma</h4>
+        <ul class="footer-links">
+          <li><a href="#">Xizmatlar</a></li>
+          <li><a href="#">Ustalar</a></li>
+          <li><a href="#">AI yordamchi</a></li>
+        </ul>
+      </div>
+
+      <!-- Yordam ustuni -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Yordam</h4>
+        <ul class="footer-links">
+          <li><a href="#">Savol-javoblar</a></li>
+          <li><a href="#">Xavfsizlik</a></li>
+          <li><a href="#">Bog‘lanish</a></li>
+        </ul>
+      </div>
+
+      <!-- Mutaxassislar uchun ustuni -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Mutaxassislar uchun</h4>
+        <ul class="footer-links">
+          <li><a href="#">Usta bo‘lish</a></li>
+          <li><a href="#">Hamkorlik shartlari</a></li>
+          <li><a href="#">Dizayn tizimi</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Pastki mualliflik huquqi qismi -->
+    <div class="footer-bottom">
+      <p>© 2025 UstaTop. Barcha huquqlar himoyalangan.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .ustatop-footer {
+    background-color: #0D1627;
+    color: #94A3B8;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 64px 24px 36px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr 1fr 1fr;
+    gap: 40px;
+    padding-bottom: 56px;
+  }
+
+  .brand-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    margin-bottom: 18px;
+  }
+
+  .logo-icon {
+    width: 38px;
+    height: 38px;
+    background-color: #1D5CE6;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-text {
+    font-size: 22px;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: -0.3px;
+  }
+
+  .logo-text span {
+    color: #1D5CE6;
+  }
+
+  .brand-desc {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #94A3B8;
+    max-width: 300px;
+    margin: 0;
+  }
+
+  .footer-heading {
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+  }
+
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .footer-links a {
+    color: #94A3B8;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+  }
+
+  .footer-links a:hover {
+    color: #FFFFFF;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 28px;
+    font-size: 13px;
+    color: #64748B;
+  }
+
+  .footer-bottom p {
+    margin: 0;
+  }
+
+  @media (max-width: 860px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  }
+</style>
+    <script src="./main.js"></script>
+    
+</body>
+</html>

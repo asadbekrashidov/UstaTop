@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>USTATop — Biz haqimizda</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .hero-pattern {
+      background-color: #0f172a;
+      background-image: radial-gradient(rgba(249, 115, 22, 0.16) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+  <!-- Navigatsiya -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2.5">
+        <span class="w-9 h-9 rounded-xl bg-orange-500 text-white font-extrabold flex items-center justify-center text-lg shadow-sm">U</span>
+        <span class="text-xl font-extrabold tracking-tight text-slate-900">USTA<span class="text-orange-500">Top</span></span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <a href="index.html" class="hover:text-orange-600 transition">Missiyamiz</a>
+        <a href="xizmatlar.html" class="hover:text-orange-600 transition">Afzalliklar</a>
+        <a href="ustalar.html" class="hover:text-orange-600 transition">Ishlash tartibi</a>
+        <a href="biz haqimizda.html" class="hover:text-orange-600 transition">Fikrlar</a>
+      </nav>
+
+      <button onclick="openModal()" class="bg-orange-500 hover:bg-orange-600 text-white text-sm font-semibold px-4 py-2.5 rounded-xl transition shadow-sm">
+        Usta chaqirish
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero bo'limi -->
+  <section class="hero-pattern text-white py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-500/15 border border-orange-500/30 text-orange-300 text-xs font-semibold tracking-wide uppercase">
+          O‘zbekiston bo‘ylab ishonchli xizmatlar platformasi
+        </span>
+        <h1 class="text-3xl sm:text-5xl font-extrabold leading-tight">
+          Har bir xonadon uchun <span class="text-orange-400">sinovdan o‘tgan</span> va mohir ustalarni topamiz
+        </h1>
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl">
+          USTATop — ta’mirlash, qurilish va maishiy xizmatlar sohasidagi eng yaxshi mutaxassislarni mijozlar bilan tezkor, shaffof va xavfsiz bog‘lovchi zamonaviy raqamli platforma.
+        </p>
+        <div class="flex flex-wrap gap-4 pt-2">
+          <button onclick="openModal()" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3.5 rounded-xl transition shadow-lg shadow-orange-500/25">
+            Buyurtma qoldirish
+          </button>
+          <a href="#missiya" class="bg-white/10 hover:bg-white/15 border border-white/15 text-white font-semibold px-6 py-3.5 rounded-xl transition">
+            Batafsil tanishish
+          </a>
+        </div>
+      </div>
+
+      <!-- O'ng tarafdagi ishonch kartasi -->
+      <div class="lg:col-span-5">
+        <div class="bg-slate-800/80 border border-slate-700 rounded-3xl p-6 sm:p-8 backdrop-blur space-y-6 shadow-2xl">
+          <div class="flex items-center justify-between border-b border-slate-700 pb-4">
+            <div>
+              <p class="text-xs text-slate-400 uppercase tracking-wider">Sifat kafolati</p>
+              <p class="text-lg font-bold text-white mt-0.5">3 bosqichli tekshiruv</p>
+            </div>
+            <span class="w-11 h-11 rounded-2xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xl">✓</span>
+          </div>
+
+          <ul class="space-y-4 text-sm text-slate-300">
+            <li class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5">1</span>
+              <span>Shaxsni tasdiqlovchi hujjatlar va ish tajribasi majburiy tekshiriladi.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5">2</span>
+              <span>Avvalgi mijozlarning real baholari va bajarilgan ishlar portfoliosi tahlil qilinadi.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-full bg-orange-500/20 text-orange-400 flex items-center justify-center shrink-0 font-bold text-xs mt-0.5">3</span>
+              <span>Kelishilgan narx va muddatga rioya qilinishi platforma tomonidan nazorat qilinadi.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistika ko'rsatkichlari -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 -mt-10 relative z-10">
+    <div class="bg-white rounded-3xl shadow-lg border border-slate-100 p-6 sm:p-10 grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+      <div>
+        <p class="text-3xl sm:text-4xl font-extrabold text-slate-900">12,500+</p>
+        <p class="text-sm text-slate-500 mt-1">Bajarilgan buyurtmalar</p>
+      </div>
+      <div>
+        <p class="text-3xl sm:text-4xl font-extrabold text-orange-500">1,800+</p>
+        <p class="text-sm text-slate-500 mt-1">Tekshirilgan ustalar</p>
+      </div>
+      <div>
+        <p class="text-3xl sm:text-4xl font-extrabold text-slate-900">4.9 / 5</p>
+        <p class="text-sm text-slate-500 mt-1">O‘rtacha mijoz bahosi</p>
+      </div>
+      <div>
+        <p class="text-3xl sm:text-4xl font-extrabold text-slate-900">14 ta</p>
+        <p class="text-sm text-slate-500 mt-1">Hudud va shaharlar</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Missiya va hikoya -->
+  <section id="missiya" class="max-w-6xl mx-auto px-4 sm:px-6 py-20">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      <div class="space-y-5">
+        <span class="text-orange-600 font-bold text-sm uppercase tracking-wider">Bizning maqsadimiz</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 leading-snug">
+          Usta izlashdagi xavotir va noaniqlikka barham beramiz
+        </h2>
+        <p class="text-slate-600 leading-relaxed">
+          Ko‘pchilik uy ta’mirlash yoki texnika tuzatishda «ishonchli usta qayerdan topaman, narxi qancha bo‘ladi, ishni sifatli bitiradimi?» degan savollarga duch keladi. USTATop aynan shu muammoni hal qilish uchun yaratilgan.
+        </p>
+        <p class="text-slate-600 leading-relaxed">
+          Biz bir tomondan mijozlarning vaqti va mablag‘ini asrasak, ikkinchi tomondan halol va o‘z kasbining ustasi bo‘lgan mutaxassislarga doimiy daromad manbai hamda munosib obro‘ orttirish imkonini beramiz.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-4">
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+          <div class="w-11 h-11 rounded-xl bg-orange-100 text-orange-600 flex items-center justify-center font-bold text-xl mb-4">⚡</div>
+          <h3 class="font-bold text-slate-900 text-lg">Tezkor javob</h3>
+          <p class="text-sm text-slate-600 mt-2">So‘rov qoldirganingizdan so‘ng 15 daqiqa ichida mos mutaxassis bog‘lanadi.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+          <div class="w-11 h-11 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-xl mb-4">🛡️</div>
+          <h3 class="font-bold text-slate-900 text-lg">Xavfsizlik</h3>
+          <p class="text-sm text-slate-600 mt-2">Har bir mutaxassisning shaxsi va malakasi platforma moderatsiyasidan o‘tadi.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+          <div class="w-11 h-11 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold text-xl mb-4">💎</div>
+          <h3 class="font-bold text-slate-900 text-lg">Shaffof narx</h3>
+          <p class="text-sm text-slate-600 mt-2">Ish boshlanishidan oldin kelishilgan narx yakunda kutilmaganda o‘zgarmaydi.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
+          <div class="w-11 h-11 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center font-bold text-xl mb-4">⭐</div>
+          <h3 class="font-bold text-slate-900 text-lg">Haqiqiy reyting</h3>
+          <p class="text-sm text-slate-600 mt-2">Faqat real buyurtma bergan mijozlargina ustaga baho va izoh qoldira oladi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ishlash tartibi -->
+  <section id="qanday-ishlaydi" class="bg-slate-900 text-white py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-orange-400 font-bold text-sm uppercase tracking-wider">Oddiy va qulay</span>
+        <h2 class="text-2xl sm:text-4xl font-extrabold mt-2">USTATop qanday ishlaydi?</h2>
+        <p class="text-slate-400 mt-3">Kerakli mutaxassisni topish uchun bor-yo‘g‘i 3 ta qadam kifoya.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-slate-800/70 border border-slate-700 rounded-2xl p-7 relative">
+          <span class="text-4xl font-extrabold text-orange-500/30 absolute top-5 right-6">01</span>
+          <h3 class="text-xl font-bold mb-3">Xizmat turini tanlang</h3>
+          <p class="text-slate-300 text-sm leading-relaxed">Santexnika, elektrik, konditsioner ta’miri yoki to‘liq uy remonti — kerakli yo‘nalishni ko‘rsating.</p>
+        </div>
+
+        <div class="bg-slate-800/70 border border-slate-700 rounded-2xl p-7 relative">
+          <span class="text-4xl font-extrabold text-orange-500/30 absolute top-5 right-6">02</span>
+          <h3 class="text-xl font-bold mb-3">Eng yaxshi ustani solishtiring</h3>
+          <p class="text-slate-300 text-sm leading-relaxed">Mutaxassislarning reytingi, tajribasi va taklif qilgan narxlarini ko‘rib o‘zingizga ma’qulini tanlang.</p>
+        </div>
+
+        <div class="bg-slate-800/70 border border-slate-700 rounded-2xl p-7 relative">
+          <span class="text-4xl font-extrabold text-orange-500/30 absolute top-5 right-6">03</span>
+          <h3 class="text-xl font-bold mb-3">Natijani qabul qiling</h3>
+          <p class="text-slate-300 text-sm leading-relaxed">Ish sifatli bajarilgach to‘lovni amalga oshiring va ustaning kelgusi faoliyati uchun baho bering.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mijozlar va Jamoa (Tab bilan) -->
+  <section id="fikrlar" class="max-w-6xl mx-auto px-4 sm:px-6 py-20">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+      <div>
+        <span class="text-orange-600 font-bold text-sm uppercase tracking-wider">Ishonch va jamoa</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-1">Biz haqimizda nima deyishadi?</h2>
+      </div>
+      <div class="inline-flex bg-slate-200/80 p-1 rounded-xl self-start">
+        <button id="tab-reviews" onclick="switchTab('reviews')" class="px-4 py-2 rounded-lg text-sm font-semibold bg-white text-slate-900 shadow-sm transition">
+          Mijozlar fikri
+        </button>
+        <button id="tab-team" onclick="switchTab('team')" class="px-4 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-slate-900 transition">
+          Jamoamiz
+        </button>
+      </div>
+    </div>
+
+    <!-- Mijozlar fikri bloki -->
+    <div id="content-reviews" class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+        <div class="text-amber-400 text-sm">★★★★★</div>
+        <p class="text-slate-600 text-sm leading-relaxed">«Kechqurun suv quvuri yorilib ketganda USTATop orqali 20 daqiqada santexnik topdim. Juda toza va tartibli ishladi, rahmat!»</p>
+        <div class="pt-2 border-t border-slate-100">
+          <p class="font-bold text-slate-900 text-sm">Dilshod Karimov</p>
+          <p class="text-xs text-slate-500">Toshkent sh., Yunusobod</p>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+        <div class="text-amber-400 text-sm">★★★★★</div>
+        <p class="text-slate-600 text-sm leading-relaxed">«Oshxona mebelini yig‘ish uchun usta chaqirdik. Vaqtida keldi, hamma asboblari o‘zida, narxi ham oldindan kelishilganidek bo‘ldi.»</p>
+        <div class="pt-2 border-t border-slate-100">
+          <p class="font-bold text-slate-900 text-sm">Madina Azimova</p>
+          <p class="text-xs text-slate-500">Samarqand sh.</p>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+        <div class="text-amber-400 text-sm">★★★★★</div>
+        <p class="text-slate-600 text-sm leading-relaxed">«O‘zim ham elektrik bo‘lib ishlayman. USTATop orqali doimiy buyurtmalar olyapman, mijozlar bilan ishlash juda qulay.»</p>
+        <div class="pt-2 border-t border-slate-100">
+          <p class="font-bold text-slate-900 text-sm">Rustam Tursunov</p>
+          <p class="text-xs text-slate-500">Usta-hamkor, 6 yillik tajriba</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jamoa bloki -->
+    <div id="content-team" class="hidden grid sm:grid-cols-3 gap-6">
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
+        <div class="w-16 h-16 rounded-full bg-orange-100 text-orange-600 font-extrabold text-xl flex items-center justify-center mx-auto mb-4">AS</div>
+        <h3 class="font-bold text-slate-900">Azizbek Sodiqov</h3>
+        <p class="text-xs text-orange-600 font-semibold mt-0.5">Asoschi va Bosh direktor</p>
+        <p class="text-sm text-slate-500 mt-3">Xizmatlar bozorini raqamlashtirish va sifat nazorati tizimi rahbari.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
+        <div class="w-16 h-16 rounded-full bg-blue-100 text-blue-600 font-extrabold text-xl flex items-center justify-center mx-auto mb-4">NR</div>
+        <h3 class="font-bold text-slate-900">Nilufar Rahimova</h3>
+        <p class="text-xs text-blue-600 font-semibold mt-0.5">Mijozlar xizmati rahbari</p>
+        <p class="text-sm text-slate-500 mt-3">Har bir buyurtmaning muammosiz va o‘z vaqtida bajarilishini nazorat qiladi.</p>
+      </div>
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
+        <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 font-extrabold text-xl flex items-center justify-center mx-auto mb-4">BK</div>
+        <h3 class="font-bold text-slate-900">Bobur Komilov</h3>
+        <p class="text-xs text-emerald-600 font-semibold mt-0.5">Texnik direktor (CTO)</p>
+        <p class="text-sm text-slate-500 mt-3">Platformaning tezkor ishlashi va tezkor qidiruv algoritmlari muallifi.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 pb-20">
+    <div class="bg-gradient-to-r from-orange-500 to-amber-500 rounded-3xl p-8 sm:p-12 text-white flex flex-col lg:flex-row items-center justify-between gap-8 shadow-xl shadow-orange-500/20">
+      <div class="space-y-2 text-center lg:text-left">
+        <h2 class="text-2xl sm:text-3xl font-extrabold">Bugunoq ishonchli usta toping!</h2>
+        <p class="text-orange-50 text-sm sm:text-base max-w-xl">Hoziroq so‘rov qoldiring yoki o‘z sohangizning mohir ustasi bo‘lsangiz, safimizga qo‘shiling.</p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-3 shrink-0">
+        <button onclick="openModal()" class="bg-slate-900 hover:bg-slate-800 text-white font-semibold px-6 py-3.5 rounded-xl transition">
+          Usta chaqirish
+        </button>
+        <button onclick="openModal('Usta sifatida ro‘yxatdan o‘tish')" class="bg-white text-orange-600 hover:bg-orange-50 font-semibold px-6 py-3.5 rounded-xl transition">
+          Usta bo‘lib qo‘shilish
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200 py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+      <div class="flex items-center gap-2">
+        <span class="w-7 h-7 rounded-lg bg-orange-500 text-white font-bold flex items-center justify-center text-sm">U</span>
+        <span class="font-bold text-slate-900">USTATop</span>
+        <span>— Barcha huquqlar himoyalangan © 2026</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <span>Tel: +998 (71) 200-00-00</span>
+        <span>Toshkent, O‘zbekiston</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal oyna -->
+  <div id="orderModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative">
+      <button onclick="closeModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 text-xl font-bold">✕</button>
+      <h3 id="modalTitle" class="text-xl font-extrabold text-slate-900">Usta chaqirish</h3>
+      <p class="text-sm text-slate-500 mt-1">Ma’lumotlaringizni qoldiring, operatorimiz 10 daqiqada bog‘lanadi.</p>
+
+      <form onsubmit="submitForm(event)" class="space-y-4 mt-5">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Ismingiz</label>
+          <input type="text" required placeholder="Masalan: Sardor" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-orange-500 text-sm">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Telefon raqamingiz</label>
+          <input type="tel" required placeholder="+998 90 123 45 67" class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-orange-500 text-sm">
+        </div>
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1">Xizmat yo‘nalishi</label>
+          <select class="w-full px-4 py-2.5 rounded-xl border border-slate-300 focus:outline-none focus:border-orange-500 text-sm bg-white">
+            <option>Santexnika ishlari</option>
+            <option>Elektrik xizmati</option>
+            <option>Maishiy texnika ta’miri</option>
+            <option>Uy va ofis ta’mirlash</option>
+            <option>Boshqa xizmat</option>
+          </select>
+        </div>
+        <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-xl transition">
+          So‘rov yuborish
+        </button>
+      </form>
+      <p id="successMsg" class="hidden mt-4 text-center text-sm font-semibold text-emerald-600 bg-emerald-50 p-3 rounded-xl">
+        ✓ So‘rovingiz qabul qilindi! Tez orada bog‘lanamiz.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function switchTab(tab) {
+      const reviews = document.getElementById('content-reviews');
+      const team = document.getElementById('content-team');
+      const btnReviews = document.getElementById('tab-reviews');
+      const btnTeam = document.getElementById('tab-team');
+
+      if (tab === 'reviews') {
+        reviews.classList.remove('hidden');
+        team.classList.add('hidden');
+        btnReviews.className = 'px-4 py-2 rounded-lg text-sm font-semibold bg-white text-slate-900 shadow-sm transition';
+        btnTeam.className = 'px-4 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-slate-900 transition';
+      } else {
+        reviews.classList.add('hidden');
+        team.classList.remove('hidden');
+        btnTeam.className = 'px-4 py-2 rounded-lg text-sm font-semibold bg-white text-slate-900 shadow-sm transition';
+        btnReviews.className = 'px-4 py-2 rounded-lg text-sm font-semibold text-slate-600 hover:text-slate-900 transition';
+      }
+    }
+
+    function openModal(title = 'Usta chaqirish') {
+      document.getElementById('modalTitle').textContent = title;
+      document.getElementById('successMsg').classList.add('hidden');
+      const modal = document.getElementById('orderModal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('orderModal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function submitForm(e) {
+      e.preventDefault();
+      document.getElementById('successMsg').classList.remove('hidden');
+      e.target.reset();
+      setTimeout(closeModal, 1800);
+    }
+  </script>
+</body>
+</html>
